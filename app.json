@@ -2,6 +2,11 @@
   "name": "Musicx",
   "description": "Telegram music bot",
   "repository": "https://github.com/Infinityworl/Musicx",
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
   "scripts": {
     "postdeploy": "python Nimsara/bot.py"
   }
