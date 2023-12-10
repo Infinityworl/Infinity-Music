@@ -1,8 +1,8 @@
 import re
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-APPID = "85"
-APIHASH = "ee40e"
+APPID = "24008761"
+APIHASH = "6312103562:AAHS1e2EN_rmaqQSpldluqmHKydranKT3OQ"
 BOTTOKEN = "6578576818:AAHZul8aG55O6AOozuNHuFTB3POMMtGjjSQ"
 
 MONGO_URI = "mongodb+srv://klgeethika:<klgeethika>@cluster0.u3oatsp.mongodb.net/?retryWrites=true&w=majority"
