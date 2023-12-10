@@ -5,3 +5,27 @@
     "repository": "https://github.com/Infinityworl/Musicx",
     "stack": "container",
   }
+{
+  "name": "Musicx",
+  "description": "Telegram music bot",
+  "repository": "https://github.com/Infinityworl/Musicx",
+  "env": {
+    "TELEGRAM_TOKEN": {
+      "description": "Your Telegram Bot API Token",
+      "required": false
+    },
+    "APP_MODE": {
+      "description": "Set the app mode (e.g., 'production', 'development')",
+      "value": "production"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "scripts": {
+    "postdeploy": "python Nimsara/bot.py"
+    // Add other necessary scripts for setup or initialization
+  }
+}
