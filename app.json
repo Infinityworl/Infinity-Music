@@ -1,0 +1,7 @@
+{"name": "Musicx",
+    "description": "Telegram music bot",
+    "logo": "",
+    "keywords": ["telegram"],
+    "repository": "https://github.com/Infinityworl/Musicx",
+    "stack": "container",
+  }
