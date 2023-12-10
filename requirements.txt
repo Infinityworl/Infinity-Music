@@ -1,2 +1,5 @@
 TgCrypto==1.2.5
 pyrogram1==0.1.0
+youtube-search-python==1.6.6
+youtube_dl==2021.12.17
+youtube-search==2.1.2
