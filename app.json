@@ -26,6 +26,5 @@
   ],
   "scripts": {
     "postdeploy": "python Nimsara/bot.py"
-    // Add other necessary scripts for setup or initialization
   }
 }
