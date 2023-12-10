@@ -6,7 +6,7 @@
     "TELEGRAM_TOKEN": {
       "description": "Your Telegram Bot API Token",
       "value": "No need"
-    },
+    }
   },
   "buildpacks": [
     {
