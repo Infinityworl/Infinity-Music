@@ -6,6 +6,10 @@
     "TELEGRAM_TOKEN": {
       "description": "Your Telegram Bot API Token",
       "value": "No need"
+    },
+    "APP_MODE": {
+      "description": "Set the app mode (e.g., 'production', 'development')",
+      "value": "production"
     }
   },
   "buildpacks": [
