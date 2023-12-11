@@ -113,12 +113,12 @@ import os
 CAPTION_TEXT = """
 **{}**
 
-⏳ **Duration:** {}
-🔗 **Channel:** [{}]({})
-👀 **Views:** `{}` 
+⏳ **ᴅᴜʀᴀᴛɪᴏɴ:** {}
+🔗 **ᴄʜᴀɴɴᴇʟ:** [{}]({})
+👀 **ᴠɪᴇᴡꜱ:** `{}` 
 
 🧑‍🎤 **Requester:** {}
-🔥 **Uploaded By**: [❦infinity❦](https://t.me/infinityx_lk)**
+🔥 **Uploaded By**: [ɪɴꜰɪɴɪᴛʏ](https://t.me/infinityx_lk)**
 
 ||[DEVELOPER](https://t.me/nimsar_a)||"""
 
