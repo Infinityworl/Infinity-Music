@@ -139,9 +139,18 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
                              [[InlineKeyboardButton("📥 Downloading...", callback_data="progress")]]))
         await bot.delete_messages(message.chat.id, [st.id])
         st2 = await message.reply_sticker(sticker=st_downloading)
-        link = YouTube(f"https://youtu.be/{vid_id}")
-        thumbloc = link.title + "thumb"
-        thumb = requests.get(link.thumbnail_url, allow_redirects=True)
+        try:
+            link = YouTube(f"https://youtu.be/{vid_id}")
+        except Exception as e:
+            await m.edit(f"**⚠️Unexpected Error 1 ⚠️**\n\n`{str(e)}`")    
+        try:
+            thumbloc = link.title + "thumb"
+        except Exception as e:
+            await m.edit(f"**⚠️Unexpected Error 2 ⚠️**\n\n`{str(e)}`")  
+        try:
+            thumb = requests.get(link.thumbnail_url, allow_redirects=True)
+        except Exception as e:
+            await m.edit(f"**⚠️Unexpected Error 3 ⚠️**\n\n`{str(e)}`")  
         open(thumbloc, 'wb').write(thumb.content)
 
         # Get the audio stream with 320kbps
