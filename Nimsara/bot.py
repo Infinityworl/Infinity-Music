@@ -114,7 +114,7 @@ CAPTION_TEXT = """
 👀 **Views:** `{}` 
 
 🧑‍🎤 **Requester:** {}
-🔥 **Uploaded By**: [❦infinity❦](https://t.me/infinityx_lk)**"""
+🔥 **Uploaded By**: [❦infinity❦](https://t.me/infinityx_lk)**
 
 ||[DEVELOPER](https://t.me/nimsar_a)||"""
 
