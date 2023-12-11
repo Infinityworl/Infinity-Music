@@ -2,7 +2,7 @@ import re
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 APPID = "24008761"
-APIHASH = "6312103562:AAHS1e2EN_rmaqQSpldluqmHKydranKT3OQ"
+APIHASH = "c6bb29db832216220e1234b163233cec"
 BOTTOKEN = "6578576818:AAHZul8aG55O6AOozuNHuFTB3POMMtGjjSQ"
 
 MONGO_URI = "mongodb+srv://klgeethika:<klgeethika>@cluster0.u3oatsp.mongodb.net/?retryWrites=true&w=majority"
