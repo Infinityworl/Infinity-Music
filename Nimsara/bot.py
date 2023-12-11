@@ -77,7 +77,7 @@ async def stats(_, query):
             else:
                 return await bot.answer_callback_query(query.id, f"This Request Completed By {done_by[1]}✅", show_alert=False)
 
-@bot.on_message(filters.regex("#request") & ~filters.edited & ~filters.bot & filters.chat(CHAT))
+@bot.on_message(filters.regex("#request") & ~filters.bot & filters.chat(CHAT))
 async def request(_, message):
     req = message.text.split("request")
     if len(req[1]) < 2:
