@@ -5,7 +5,7 @@ APPID = "24008761"
 APIHASH = "c6bb29db832216220e1234b163233cec"
 BOTTOKEN = "6578576818:AAHZul8aG55O6AOozuNHuFTB3POMMtGjjSQ"
 
-MONGO_URI = "mongodb+srv://klgeethika:<klgeethika>@cluster0.u3oatsp.mongodb.net/?retryWrites=true&w=majority"
+MONGO_URI = "mongodb+srv://nimsara:nimsara@cluster0.mgn7qqv.mongodb.net/?retryWrites=true&w=majority"
 BOT_USERNAME = "Nimsaraxbot"
 
 id_pattern = re.compile(r'^.\d+$')
