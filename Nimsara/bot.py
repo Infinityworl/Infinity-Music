@@ -132,8 +132,9 @@ def time_to_seconds(time):
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(':'))))
 
 
-async def downloadsong(m, message, vid_id, title, duration, performer, views):
+async def downloadsong(m,st, message, vid_id, title, duration, performer, views):
     try:
+        await bot.delete_messages(message.chat.id, [st_id])
         m = await m.edit(text=f"📥 **Upload Started**",
                          reply_markup=InlineKeyboardMarkup(
                              [[InlineKeyboardButton("📥 Downloading...", callback_data="progress")]]))
@@ -180,6 +181,7 @@ async def songdown(_, message):
    try: 
     if len(message.command) < 2:
             return await message.reply_text("Give a song name ⚠️")
+    st =await message.reply_sticker(sticker='CAACAgIAAxkBAAEoL9Nldq4aMAUhIoKg2lMSQ6OfZERpCgACAQEAAladvQoivp8OuMLmNDME')
     m = await message.reply_text("🔎 Searching ...")
     name = message.text.split(None, 1)[1]
     results = YoutubeSearch(name, max_results=1).to_dict()
@@ -188,7 +190,7 @@ async def songdown(_, message):
     duration = results[0]["duration"]
     performer = results[0]["channel"]
     views = results[0]["views"]
-    await downloadsong(m, message, vid_id, title, duration, performer, views)
+    await downloadsong(m,st, message, vid_id, title, duration, performer, views)
    except Exception as e:
       await m.edit(f"**Nothing Found** {message.from_user.mention}")
 
