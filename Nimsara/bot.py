@@ -151,16 +151,31 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
             thumb = requests.get(link.thumbnail_url, allow_redirects=True)
         except Exception as e:
             await m.edit(f"**⚠️Unexpected Error 3 ⚠️**\n\n`{str(e)}`")  
-        open(thumbloc, 'wb').write(thumb.content)
+        try:
+            open(thumbloc, 'wb').write(thumb.content)
+        except Exception as e:
+            await m.edit(f"**⚠️Unexpected Error 4 ⚠️**\n\n`{str(e)}`")  
 
         # Get the audio stream with 320kbps
-        songlink = link.streams.filter(only_audio=True, file_extension='mp4').order_by('abr').desc().first()
+        try:
+            songlink = link.streams.filter(only_audio=True, file_extension='mp4').order_by('abr').desc().first()
+        except Exception as e:
+            await m.edit(f"**⚠️Unexpected Error 5 ⚠️**\n\n`{str(e)}`")  
         # Download the audio
-        down = songlink.download()
+        try:
+            down = songlink.download()
+        except Exception as e:
+            await m.edit(f"**⚠️Unexpected Error 6 ⚠️**\n\n`{str(e)}`")  
         # Rename the file to .mp3
-        first, last = os.path.splitext(down)
+        try:
+            first, last = os.path.splitext(down)
+        except Exception as e:
+            await m.edit(f"**⚠️Unexpected Error 7 ⚠️**\n\n`{str(e)}`")  
         song = first + '.mp3'
-        os.rename(down, song)
+        try:
+            os.rename(down, song)
+        except Exception as e:
+            await m.edit(f"**⚠️Unexpected Error 8 ⚠️**\n\n`{str(e)}`")  
         await st2.delete()
         st3 = await message.reply_sticker(sticker=st_uploading)
         m = await m.edit(text="📥 **Upload Started**",
