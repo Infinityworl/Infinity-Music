@@ -139,43 +139,21 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
                              [[InlineKeyboardButton("📥 Downloading...", callback_data="progress")]]))
         await bot.delete_messages(message.chat.id, [st.id])
         st2 = await message.reply_sticker(sticker=st_downloading)
-        try:
-            link = YouTube(f"https://youtu.be/{vid_id}")
-        except Exception as e:
-            await m.edit(f"**⚠️Unexpected Error 1 ⚠️**\n\n`{str(e)}`")    
-        try:
-            thumbloc = link.title + "thumb"
-        except Exception as e:
-            await m.edit(f"**⚠️Unexpected Error 2 ⚠️**\n\n`{str(e)}`")  
-        try:
-            thumb = requests.get(link.thumbnail_url, allow_redirects=True)
-        except Exception as e:
-            await m.edit(f"**⚠️Unexpected Error 3 ⚠️**\n\n`{str(e)}`")  
-        try:
-            open(thumbloc, 'wb').write(thumb.content)
-        except Exception as e:
-            await m.edit(f"**⚠️Unexpected Error 4 ⚠️**\n\n`{str(e)}`")  
+
+        link = YouTube(f"https://youtu.be/{vid_id}")
+        thumbloc = link.title + "thumb"
+        thumb = requests.get(link.thumbnail_url, allow_redirects=True)
+        open(thumbloc, 'wb').write(thumb.content)
 
         # Get the audio stream with 320kbps
-        try:
-            songlink = link.streams.filter(only_audio=True, file_extension='mp4').order_by('abr').desc().first()
-        except Exception as e:
-            await m.edit(f"**⚠️Unexpected Error 5 ⚠️**\n\n`{str(e)}`")  
+        songlink = link.streams.filter(only_audio=True, file_extension='mp4').order_by('abr').desc().first()
+
         # Download the audio
-        try:
-            down = songlink.download()
-        except Exception as e:
-            await m.edit(f"**⚠️Unexpected Error 6 ⚠️**\n\n`{str(e)}`")  
+        down = songlink.download()
         # Rename the file to .mp3
-        try:
-            first, last = os.path.splitext(down)
-        except Exception as e:
-            await m.edit(f"**⚠️Unexpected Error 7 ⚠️**\n\n`{str(e)}`")  
         song = first + '.mp3'
-        try:
-            os.rename(down, song)
-        except Exception as e:
-            await m.edit(f"**⚠️Unexpected Error 8 ⚠️**\n\n`{str(e)}`")  
+        os.rename(down, song)
+
         await st2.delete()
         st3 = await message.reply_sticker(sticker=st_uploading)
         m = await m.edit(text="📥 **Upload Started**",
