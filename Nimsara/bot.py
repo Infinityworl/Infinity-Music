@@ -138,7 +138,7 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
                          reply_markup=InlineKeyboardMarkup(
                              [[InlineKeyboardButton("📥 Downloading...", callback_data="progress")]]))
         await bot.delete_messages(message.chat.id, [st.id])
-        st = await message.reply_sticker(sticker='CAACAgUAAxkBAAEoL-lldrI8Buz8sq_NLMJoCZ-cXJRrnwACpQADyJRkFHhDhV4BRbZGMwQ')
+        st2 = await message.reply_sticker(sticker='CAACAgUAAxkBAAEoL-lldrI8Buz8sq_NLMJoCZ-cXJRrnwACpQADyJRkFHhDhV4BRbZGMwQ')
         link = YouTube(f"https://youtu.be/{vid_id}")
         thumbloc = link.title + "thumb"
         thumb = requests.get(link.thumbnail_url, allow_redirects=True)
@@ -164,7 +164,7 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
                                   thumb=thumbloc,
                                   reply_markup=CAPTION_BTN)
         await m.delete()
-        await st.delete()
+        await st2.delete()
 
         # Clean up the downloaded files
         if os.path.exists(song):
