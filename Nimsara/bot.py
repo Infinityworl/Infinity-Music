@@ -164,8 +164,8 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
                                   thumb=thumbloc,
                                   reply_markup=CAPTION_BTN)
         await st2.delete()
-        st3 = await message.reply_sticker(sticker='CAACAgUAAxkBAAEoL_9ldroNVKslyAv7kU28qs2aF3j7JwACpAADyJRkFIBDD5aPWWn6MwQ')
         await m.delete()
+        st3 = await message.reply_sticker(sticker='CAACAgUAAxkBAAEoL_9ldroNVKslyAv7kU28qs2aF3j7JwACpAADyJRkFIBDD5aPWWn6MwQ')
         await asyncio.sleep(3)
         await st3.delete()
 
