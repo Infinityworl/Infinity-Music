@@ -9,7 +9,7 @@ MONGO_URI = "mongodb+srv://nimsara:nimsara@cluster0.mgn7qqv.mongodb.net/?retryWr
 BOT_USERNAME = "Nimsaraxbot"
 
 id_pattern = re.compile(r'^.\d+$')
-REQ_ARIA= int(-1002062161170)
+REQ_ARIA= int(-1001885188788)
 CHAT = [int(ch) if id_pattern.search(ch) else ch for ch in '-1001879497983 -1001396114028 -1001375013540'.split()]
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in '1949037588 1746346543 6363073939'.split()]
 
