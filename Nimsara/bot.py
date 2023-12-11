@@ -116,7 +116,6 @@ CAPTION_TEXT = """
 🧑‍🎤 **Requester:** {}
 🔥 **Uploaded By**: [❦infinity❦](https://t.me/infinityx_lk)**"""
 
-**[Moon v2](https://t.me/Nimsaraxbot)**
 ||[DEVELOPER](https://t.me/nimsar_a)||"""
 
 
