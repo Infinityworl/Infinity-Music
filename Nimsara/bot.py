@@ -33,11 +33,11 @@ async def start(_, message):
         st =await message.reply_sticker(sticker='CAACAgIAAxkBAAEoL9Nldq4aMAUhIoKg2lMSQ6OfZERpCgACAQEAAladvQoivp8OuMLmNDME')
         st_id = st.id
         await asyncio.sleep(5)
-        await bot.delete_messages(message.chat.id, [st_id])
         await bot.send_message(
             message.chat.id,
             text = START_TEXT.format(message.from_user.mention),
             reply_markup = START_BUTTON)
+        await bot.delete_messages(message.chat.id, [st_id])
         return await add_served_chat(message.chat.id) 
     else:
         await bot.send_message(
