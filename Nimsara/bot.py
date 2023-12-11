@@ -30,7 +30,7 @@ REQ_BTNS = InlineKeyboardMarkup(
 @bot.on_message(filters.command("start"))
 async def start(_, message):
     if message.chat.type != "private":
-        await message.reply_sticker(sticker=CAACAgIAAxkBAAEoL7lldqZL-DdxvDk2sl_Aacck5HaTagACmhQAAsnkkUnqr1sH9YtLZjME,reply_to_message_id=message.message_id)
+        await message.send_sticker(chat_id=message.chat.id, sticker=CAACAgIAAxkBAAEoL7lldqZL-DdxvDk2sl_Aacck5HaTagACmhQAAsnkkUnqr1sH9YtLZjME)
         await bot.send_message(
             message.chat.id,
             text = START_TEXT.format(message.from_user.mention),
