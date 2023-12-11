@@ -117,8 +117,8 @@ CAPTION_TEXT = """
 🔥 **Uploaded By**: [❦infinity❦](https://t.me/infinityx_lk)**"""
 
 **[Moon v2](https://t.me/Nimsaraxbot)**
-||[©️ DEVELOPER](https://t.me/nimsar_a)||
-"""
+||[DEVELOPER](https://t.me/nimsar_a)||"""
+
 
 CAPTION_BTN = InlineKeyboardMarkup(
             [[InlineKeyboardButton("BOT", url="https://t.me/Nimsaraxbot")]])
