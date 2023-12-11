@@ -17,7 +17,8 @@ START_TEXT = "Hey {} ᴅᴇᴀʀ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴍᴜꜱɪᴄ ᴡ�
 START_BUTTON = InlineKeyboardMarkup(
                             [[
                                     InlineKeyboardButton('ᴅᴇᴠᴇʟᴏᴘᴇʀ' , url="https://t.me/Nimsar_a"),
-                                    InlineKeyboardButton('ꜱᴜᴘᴘᴏʀᴛ' , url="https://t.me/infinityx_lk")
+                                    InlineKeyboardButton('ꜱᴜᴘᴘᴏʀᴛ' , url="https://t.me/infinityx_lk"),
+                                    InlinekeyboardButton('ᴀᴅᴅ ᴍᴇ ʙᴇᴀᴜᴛʏ' , url="https://t.me/Nimsaraxbot?startgroup=true")
                             ]]
                             )
 
