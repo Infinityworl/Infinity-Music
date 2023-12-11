@@ -181,7 +181,7 @@ async def songdown(_, message):
    try: 
     if len(message.command) < 2:
             return await message.reply_text("Give a song name ⚠️")
-    st =await message.reply_sticker(sticker='CAACAgIAAxkBAAEoL9Nldq4aMAUhIoKg2lMSQ6OfZERpCgACAQEAAladvQoivp8OuMLmNDME')
+    st =await message.reply_sticker(sticker='CAACAgUAAxkBAAEoL-dldrFPzxcocixG6zvPqSWGNjhtfAACmgADyJRkFCxl4eFc7yVqMwQ')
     m = await message.reply_text("🔎 Searching ...")
     name = message.text.split(None, 1)[1]
     results = YoutubeSearch(name, max_results=1).to_dict()
