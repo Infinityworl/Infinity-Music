@@ -134,7 +134,7 @@ def time_to_seconds(time):
 
 async def downloadsong(m,st, message, vid_id, title, duration, performer, views):
     try:
-        m = await m.edit(text=f"🌼 **ᴅᴏᴡɴʟᴏᴀᴅ ꜱᴛᴀʀᴛᴇᴅ**",
+        m = await m.edit(text=f"🌼 **𝔻𝕠𝕨𝕟𝕝𝕠𝕒𝕕𝕚𝕟𝕘 𝕐𝕠𝕦𝕣 𝕄𝕦𝕤𝕚𝕔**",
                          reply_markup=InlineKeyboardMarkup(
                              [[InlineKeyboardButton("🌼 •´¯`•. 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 .•´¯`•...", callback_data="progress")]]))
         await bot.delete_messages(message.chat.id, [st.id])
@@ -156,7 +156,7 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
 
         st3 = await message.reply_sticker(sticker=st_uploading)
         await st2.delete()
-        m = await m.edit(text="🌸 **ᴜᴘʟᴏᴀᴅ ꜱᴛᴀʀᴛᴇᴅ**",
+        m = await m.edit(text="🌸 **𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐒𝐞𝐯𝐞𝐫**",
                          reply_markup=InlineKeyboardMarkup(
                              [[InlineKeyboardButton("🌸 🅄🄿🄻🄾🄰🄳🄸🄽🄶 🅃🄴🄻🄴🄶🅁🄰🄼...", callback_data="progress")]]))
 
@@ -189,9 +189,9 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
 async def songdown(_, message):
    try: 
     if len(message.command) < 2:
-            return await message.reply_text("Give a song name brother  ⚠️")
+            return await message.reply_text("𝙶𝚒𝚟𝚎 𝚖𝚎 𝚜𝚘𝚗𝚐 𝚗𝚊𝚖𝚎 𝚋𝚛𝚘𝚝𝚑𝚎𝚛  ⚠️")
     st =await message.reply_sticker(sticker=st_loading)
-    m = await message.reply_text("🔎 Searching your results ...")
+    m = await message.reply_text("⚡ ꜱᴇᴀʀᴄʜɪɴɢ ʏᴏᴜʀ ʀᴇꜱᴜʟᴛꜱ ...")
     name = message.text.split(None, 1)[1]
     results = YoutubeSearch(name, max_results=1).to_dict()
     title = results[0]["title"]
