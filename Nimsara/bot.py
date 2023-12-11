@@ -32,7 +32,7 @@ async def start(_, message):
     if message.chat.type != "private":
         st =await message.reply_sticker(sticker='CAACAgIAAxkBAAEoL9Nldq4aMAUhIoKg2lMSQ6OfZERpCgACAQEAAladvQoivp8OuMLmNDME')
         st_id = st.id
-        await asyncio.sleep(5)
+        await asyncio.sleep(3)
         await bot.send_message(
             message.chat.id,
             text = START_TEXT.format(message.from_user.mention),
@@ -157,6 +157,8 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
                          reply_markup=InlineKeyboardMarkup(
                              [[InlineKeyboardButton("📤 Uploading...", callback_data="progress")]]))
 
+        await st2.delete()
+        st3 = await message.reply_sticker(sticker='CAACAgUAAxkBAAEoL_9ldroNVKslyAv7kU28qs2aF3j7JwACpAADyJRkFIBDD5aPWWn6MwQ')
         await message.reply_audio(song,
                                   caption=CAPTION_TEXT.format(title, duration, performer,
                                                               f"https://youtu.be/{vid_id}", views,
@@ -164,7 +166,8 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
                                   thumb=thumbloc,
                                   reply_markup=CAPTION_BTN)
         await m.delete()
-        await st2.delete()
+        await asyncio.sleep(3)
+        await st3.delete()
 
         # Clean up the downloaded files
         if os.path.exists(song):
