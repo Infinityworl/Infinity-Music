@@ -162,7 +162,7 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
         song = first + '.mp3'
         os.rename(down, song)
         await st2.delete()
-        # st3 = await message.reply_sticker(sticker=st_uploading)
+        st3 = await message.reply_sticker(sticker=st_uploading)
         m = await m.edit(text="📥 **Upload Started**",
                          reply_markup=InlineKeyboardMarkup(
                              [[InlineKeyboardButton("📤 Uploading...", callback_data="progress")]]))
@@ -175,7 +175,7 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
                                   reply_markup=CAPTION_BTN)
         
         await m.delete()
-        # await st3.delete()
+        await st3.delete()
         st4 = await message.reply_sticker(sticker=st_done)
         await asyncio.sleep(3)
         await st4.delete()
