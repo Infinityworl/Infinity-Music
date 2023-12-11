@@ -120,7 +120,7 @@ CAPTION_TEXT = """
 """
 
 CAPTION_BTN = InlineKeyboardMarkup(
-            [[InlineKeyboardButton("BOT", url="https://t.me/Nimsaraxbo")]])
+            [[InlineKeyboardButton("BOT", url="https://t.me/Nimsaraxbot")]])
 
 
 def time_to_seconds(time):
