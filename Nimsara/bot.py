@@ -200,8 +200,8 @@ async def songdown(_, message):
 #🔗 **Watch on** [Youtube]({link})
 #:---------------------------:
 
-#👤**Requested By**: {message.from_user.mention()}
-#📤 **Uploaded By: [❦infinity❦](https://t.me/infinityx_lk)**"""
+#🧑‍🎤**Requested By**: {message.from_user.mention()}
+#📤 **Uploaded By**: [❦infinity❦](https://t.me/infinityx_lk)**"""
 
 #===============================FOR ADMINS=========================================
 
