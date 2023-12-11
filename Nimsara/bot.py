@@ -26,15 +26,15 @@ REQ_BTNS = InlineKeyboardMarkup(
                                     InlineKeyboardButton('Pending 👁‍🗨' , callback_data=f'pending')
                             ]]
                             )
-
 @bot.on_message(filters.command("start"))
 async def start(_, message):
     if message.chat.type != "private":
-       await bot.send_message(
-        message.chat.id,
-        text = START_TEXT.format(message.from_user.mention),
-        reply_markup = START_BUTTON)
-       return await add_served_chat(message.chat.id) 
+        await message.reply_sticker(sticker='CAACAgIAAxkBAAEoL7lldqZL-DdxvDk2sl_Aacck5HaTagACmhQAAsnkkUnqr1sH9YtLZjME')
+        await bot.send_message(
+            message.chat.id,
+            text = START_TEXT.format(message.from_user.mention),
+            reply_markup = START_BUTTON)
+        return await add_served_chat(message.chat.id) 
     else:
         await bot.send_message(
             message.from_user.id,
