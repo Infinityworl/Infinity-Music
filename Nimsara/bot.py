@@ -147,9 +147,9 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
 
         # Get the audio stream with 320kbps
         songlink = link.streams.filter(only_audio=True, file_extension='mp4').order_by('abr').desc().first()
-        first, last = os.path.splitext(down)
-        # Download the audio
         down = songlink.download()
+        # Download the audio
+        first, last = os.path.splitext(down)
         # Rename the file to .mp3
         song = first + '.mp3'
         os.rename(down, song)
