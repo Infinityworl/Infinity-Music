@@ -93,11 +93,11 @@ async def request(_, message):
                             ]]
                             ))
     await bot.send_message(REQ_ARIA, text=f"**#New_Request\n\n👤Requester** - {message.from_user.mention}(`{message.from_user.id}`)\n**💬Chat** - {message.chat.title}(`{message.chat.id}`)\n**📨Message** - {req[1]}", reply_markup=REQ_BTNS)
-    await message.reply_text(f"**{message.from_user.mention} Your Request have added To The List 🗒**\n#Requested :\n`{req[1]}`",
+    await message.reply_text(f"**{message.from_user.mention} ඔයාගේ ඉල්ලිම අප වෙත ලැබි ඇත 🗒**\n#Requested :\n`{req[1]}`",
          reply_markup=(InlineKeyboardMarkup(
                             [
                                 [
-                                    InlineKeyboardButton('👁‍🗨 View Requests 👁‍🗨' , url='https://t.me/+eu7q3udOdA04YjM1'),
+                                    InlineKeyboardButton('👁‍🗨 ඉල්ලිම බලන්න 👁‍🗨' , url='https://t.me/+eu7q3udOdA04YjM1'),
                                 ]
                             ])),
          disable_web_page_preview=True
