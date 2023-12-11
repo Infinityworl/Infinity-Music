@@ -158,7 +158,7 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
         await st2.delete()
         m = await m.edit(text="🌸 **ᴜᴘʟᴏᴀᴅ ꜱᴛᴀʀᴛᴇᴅ**",
                          reply_markup=InlineKeyboardMarkup(
-                             [[InlineKeyboardButton("🌸 ᴜᴘʟᴏᴀᴅɪɴɢ ᴛᴇʟᴇɢʀᴀᴍ...", callback_data="progress")]]))
+                             [[InlineKeyboardButton("🌸 🅄🄿🄻🄾🄰🄳🄸🄽🄶 🅃🄴🄻🄴🄶🅁🄰🄼...", callback_data="progress")]]))
 
         await message.reply_audio(song,
                                   caption=CAPTION_TEXT.format(title, duration, performer,
@@ -191,7 +191,7 @@ async def songdown(_, message):
     if len(message.command) < 2:
             return await message.reply_text("Give a song name brother  ⚠️")
     st =await message.reply_sticker(sticker=st_loading)
-    m = await message.reply_text("🔎 Searching ...")
+    m = await message.reply_text("🔎 Searching your results ...")
     name = message.text.split(None, 1)[1]
     results = YoutubeSearch(name, max_results=1).to_dict()
     title = results[0]["title"]
