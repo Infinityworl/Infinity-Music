@@ -30,7 +30,7 @@ REQ_BTNS = InlineKeyboardMarkup(
 @bot.on_message(filters.command("start"))
 async def start(_, message):
     if message.chat.type != "private":
-        st =await message.reply_sticker(sticker='CAACAgIAAxkBAAEoL9Nldq4aMAUhIoKg2lMSQ6OfZERpCgACAQEAAladvQoivp8OuMLmNDME')
+        st =await message.reply_sticker(sticker=st_start)
         st_id = st.id
         await asyncio.sleep(3)
         await bot.send_message(
@@ -138,7 +138,7 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
                          reply_markup=InlineKeyboardMarkup(
                              [[InlineKeyboardButton("📥 Downloading...", callback_data="progress")]]))
         await bot.delete_messages(message.chat.id, [st.id])
-        st2 = await message.reply_sticker(sticker='CAACAgUAAxkBAAEoMAlldrwZJuyZvCYdaqdPIEKgMAvFEwACnQADyJRkFKod8wepbhc6MwQ')
+        st2 = await message.reply_sticker(sticker=st_downloading)
         link = YouTube(f"https://youtu.be/{vid_id}")
         thumbloc = link.title + "thumb"
         thumb = requests.get(link.thumbnail_url, allow_redirects=True)
@@ -153,7 +153,7 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
         song = first + '.mp3'
         os.rename(down, song)
         await st2.delete()
-        st3 = await message.reply_sticker(sticker='CAACAgUAAxkBAAEoL-lldrI8Buz8sq_NLMJoCZ-cXJRrnwACpQADyJRkFHhDhV4BRbZGMwQ')
+        st3 = await message.reply_sticker(sticker=st_uploading)
         m = await m.edit(text="📥 **Upload Started**",
                          reply_markup=InlineKeyboardMarkup(
                              [[InlineKeyboardButton("📤 Uploading...", callback_data="progress")]]))
@@ -167,7 +167,7 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
         
         await m.delete()
         await st3.delete()
-        st4 = await message.reply_sticker(sticker='CAACAgUAAxkBAAEoL_9ldroNVKslyAv7kU28qs2aF3j7JwACpAADyJRkFIBDD5aPWWn6MwQ')
+        st4 = await message.reply_sticker(sticker=st_done)
         await asyncio.sleep(3)
         await st4.delete()
 
@@ -188,7 +188,7 @@ async def songdown(_, message):
    try: 
     if len(message.command) < 2:
             return await message.reply_text("Give a song name ⚠️")
-    st =await message.reply_sticker(sticker='CAACAgUAAxkBAAEoL-dldrFPzxcocixG6zvPqSWGNjhtfAACmgADyJRkFCxl4eFc7yVqMwQ')
+    st =await message.reply_sticker(sticker=st_loading)
     m = await message.reply_text("🔎 Searching ...")
     name = message.text.split(None, 1)[1]
     results = YoutubeSearch(name, max_results=1).to_dict()
