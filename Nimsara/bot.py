@@ -138,7 +138,7 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
                          reply_markup=InlineKeyboardMarkup(
                              [[InlineKeyboardButton("📥 Downloading...", callback_data="progress")]]))
         await bot.delete_messages(message.chat.id, [st.id])
-        st2 = await message.reply_sticker(sticker='CAACAgUAAxkBAAEoL-lldrI8Buz8sq_NLMJoCZ-cXJRrnwACpQADyJRkFHhDhV4BRbZGMwQ')
+        st2 = await message.reply_sticker(sticker='CAACAgUAAxkBAAEoMAlldrwZJuyZvCYdaqdPIEKgMAvFEwACnQADyJRkFKod8wepbhc6MwQ')
         link = YouTube(f"https://youtu.be/{vid_id}")
         thumbloc = link.title + "thumb"
         thumb = requests.get(link.thumbnail_url, allow_redirects=True)
@@ -152,7 +152,8 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
         first, last = os.path.splitext(down)
         song = first + '.mp3'
         os.rename(down, song)
-
+        await st2.delete()
+        st3 = await message.reply_sticker(sticker='CAACAgUAAxkBAAEoL-lldrI8Buz8sq_NLMJoCZ-cXJRrnwACpQADyJRkFHhDhV4BRbZGMwQ')
         m = await m.edit(text="📥 **Upload Started**",
                          reply_markup=InlineKeyboardMarkup(
                              [[InlineKeyboardButton("📤 Uploading...", callback_data="progress")]]))
@@ -163,9 +164,10 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
                                                               message.from_user.mention if message.from_user else "Anonymous Admin"),
                                   thumb=thumbloc,
                                   reply_markup=CAPTION_BTN)
-        await st2.delete()
+        
         await m.delete()
-        st3 = await message.reply_sticker(sticker='CAACAgUAAxkBAAEoL_9ldroNVKslyAv7kU28qs2aF3j7JwACpAADyJRkFIBDD5aPWWn6MwQ')
+        await st3.delete()
+        st4 = await message.reply_sticker(sticker='CAACAgUAAxkBAAEoL_9ldroNVKslyAv7kU28qs2aF3j7JwACpAADyJRkFIBDD5aPWWn6MwQ')
         await asyncio.sleep(3)
         await st3.delete()
 
