@@ -154,8 +154,8 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
         song = first + '.mp3'
         os.rename(down, song)
 
-        await st2.delete()
         st3 = await message.reply_sticker(sticker=st_uploading)
+        await st2.delete()
         m = await m.edit(text="📥 **Upload Started**",
                          reply_markup=InlineKeyboardMarkup(
                              [[InlineKeyboardButton("📤 Uploading...", callback_data="progress")]]))
