@@ -134,9 +134,9 @@ def time_to_seconds(time):
 
 async def downloadsong(m,st, message, vid_id, title, duration, performer, views):
     try:
-        m = await m.edit(text=f"📥 **Download Started**",
+        m = await m.edit(text=f"🌼 **Download Started**",
                          reply_markup=InlineKeyboardMarkup(
-                             [[InlineKeyboardButton("📥 Downloading...", callback_data="progress")]]))
+                             [[InlineKeyboardButton("🌼 Downloading song...", callback_data="progress")]]))
         await bot.delete_messages(message.chat.id, [st.id])
         st2 = await message.reply_sticker(sticker=st_downloading)
 
@@ -156,9 +156,9 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
 
         st3 = await message.reply_sticker(sticker=st_uploading)
         await st2.delete()
-        m = await m.edit(text="⭕ **Upload Started**",
+        m = await m.edit(text="🌸 **Upload Started**",
                          reply_markup=InlineKeyboardMarkup(
-                             [[InlineKeyboardButton("⭕ Uploading...", callback_data="progress")]]))
+                             [[InlineKeyboardButton("🌸 Uploading Telegram ...", callback_data="progress")]]))
 
         await message.reply_audio(song,
                                   caption=CAPTION_TEXT.format(title, duration, performer,
