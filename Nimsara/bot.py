@@ -84,8 +84,8 @@ async def request(_, message):
             return await message.reply_text("**හරියටම Film Request එකක් දාන්නෙ කොහොමද  දැනගන්න Request channel එකට Join වෙලා pined message එක කියවන්න**",
                                            reply_markup=InlineKeyboardMarkup(
                             [[
-                                    InlineKeyboardButton('Request Channel' , url='https://t.me/+_zM-aTIXu-IyMzk1'),
-                                    InlineKeyboardButton('Pinned Message' , url='https://t.me/c/1693331508/23')
+                                    InlineKeyboardButton('Request Channel' , url='https://t.me/+eu7q3udOdA04YjM1'),
+                                    InlineKeyboardButton('Pinned Message' , url='https://t.me/c/2062161170/2')
                             ]]
                             ))
     await bot.send_message(REQ_ARIA, text=f"**#New_Request\n\n👤Requester** - {message.from_user.mention}(`{message.from_user.id}`)\n**💬Chat** - {message.chat.title}(`{message.chat.id}`)\n**📨Message** - {req[1]}", reply_markup=REQ_BTNS)
@@ -93,7 +93,7 @@ async def request(_, message):
          reply_markup=(InlineKeyboardMarkup(
                             [
                                 [
-                                    InlineKeyboardButton('👁‍🗨 View Requests 👁‍🗨' , url='https://t.me/+_zM-aTIXu-IyMzk1'),
+                                    InlineKeyboardButton('👁‍🗨 View Requests 👁‍🗨' , url='https://t.me/+eu7q3udOdA04YjM1'),
                                 ]
                             ])),
          disable_web_page_preview=True
@@ -113,7 +113,8 @@ CAPTION_TEXT = """
 🔗 **Channel:** [{}]({})
 👀 **Views:** `{}` 
 
-👤 **Requester:** {}
+🧑‍🎤 **Requester:** {}
+🔥 **Uploaded By**: [❦infinity❦](https://t.me/infinityx_lk)**"""
 
 **[🤖 Moon v2](https://t.me/Nimsaraxbot)**
 ||[©️ DEVELOPER](https://t.me/nimsar_a)||
