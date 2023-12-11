@@ -156,9 +156,9 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
 
         st3 = await message.reply_sticker(sticker=st_uploading)
         await st2.delete()
-        m = await m.edit(text="📥 **Upload Started**",
+        m = await m.edit(text="⭕ **Upload Started**",
                          reply_markup=InlineKeyboardMarkup(
-                             [[InlineKeyboardButton("📤 Uploading...", callback_data="progress")]]))
+                             [[InlineKeyboardButton("⭕ Uploading...", callback_data="progress")]]))
 
         await message.reply_audio(song,
                                   caption=CAPTION_TEXT.format(title, duration, performer,
@@ -189,7 +189,7 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
 async def songdown(_, message):
    try: 
     if len(message.command) < 2:
-            return await message.reply_text("Give a song name ⚠️")
+            return await message.reply_text("Give a song name brother  ⚠️")
     st =await message.reply_sticker(sticker=st_loading)
     m = await message.reply_text("🔎 Searching ...")
     name = message.text.split(None, 1)[1]
