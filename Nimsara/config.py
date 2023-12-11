@@ -24,5 +24,5 @@ START_BUTTON = InlineKeyboardMarkup(
 st_start = 'CAACAgIAAxkBAAEoL9Nldq4aMAUhIoKg2lMSQ6OfZERpCgACAQEAAladvQoivp8OuMLmNDME'
 st_loading ='CAACAgUAAxkBAAEoL-dldrFPzxcocixG6zvPqSWGNjhtfAACmgADyJRkFCxl4eFc7yVqMwQ'
 st_downloading = 'CAACAgUAAxkBAAEoMAlldrwZJuyZvCYdaqdPIEKgMAvFEwACnQADyJRkFKod8wepbhc6MwQ'
-st_uploading = 'CAACAgUAAxkBAAEoL-lldrI8Buz8sq_NLMJoCZ-cXJRrnwACpQADyJRkFHhDhV4BRbZGMwQ'
+st_uploading = 'CAACAgUAAxkBAAEoMCNldr65MpR0gSM08Dc5UHUJv9Is1gACpQADyJRkFHhDhV4BRbZGMwQ'
 st_done= 'CAACAgUAAxkBAAEoL_9ldroNVKslyAv7kU28qs2aF3j7JwACpAADyJRkFIBDD5aPWWn6MwQ'
