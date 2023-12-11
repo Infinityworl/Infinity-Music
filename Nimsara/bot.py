@@ -169,7 +169,7 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
         await st3.delete()
         st4 = await message.reply_sticker(sticker='CAACAgUAAxkBAAEoL_9ldroNVKslyAv7kU28qs2aF3j7JwACpAADyJRkFIBDD5aPWWn6MwQ')
         await asyncio.sleep(3)
-        await st3.delete()
+        await st4.delete()
 
         # Clean up the downloaded files
         if os.path.exists(song):
