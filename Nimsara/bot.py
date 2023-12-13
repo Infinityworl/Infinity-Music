@@ -120,7 +120,7 @@ CAPTION_TEXT = """
 🧑‍🎤 **Requester:** {}
 🔥 **Uploaded By**: [ɪɴꜰɪɴɪᴛʏ](https://t.me/infinityx_lk)**
 
-||[DEVELOPER](https://t.me/nimsar_a)||"""
+**[DEVELOPER](https://t.me/nimsar_a)**
 
 
 CAPTION_BTN = InlineKeyboardMarkup(
