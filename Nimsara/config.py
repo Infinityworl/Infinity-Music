@@ -15,11 +15,19 @@ ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in '194903
 
 START_TEXT = "Hey {} 🌸 ᴛʜɪꜱ ɪꜱ ᴍᴏꜱᴛ ᴀᴅᴠᴀɴᴄᴇᴅ ᴍᴜꜱɪᴄ ꜰɪɴᴅᴇʀ ʙᴏᴛ, ᴋᴇʏᴡᴏʀᴅ ꜱᴇᴀʀᴄʜᴇʀꜱ & ᴀʟꜱᴏ ᴠᴏɪᴄᴇ ꜱᴇᴀʀᴄʜᴇʀꜱ ꜱᴜᴘᴘᴏʀᴛᴇᴅ 🌷 "
 START_BUTTON = InlineKeyboardMarkup(
-                            [[
-                                    InlineKeyboardButton('ᴅᴇᴠᴇʟᴏᴘᴇʀ' , url="https://t.me/Nimsar_a"),
-                                    InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ʙᴇᴀᴜᴛʏ' , url="https://t.me/Nimsaraxbot?startgroup=true")
-                            ]]
-                            )
+                [
+                 [
+                 InlineKeyboardButton("❤️\u200d🔥About❤️\u200d🔥", url='https://t.me/ItsMeSithija'),
+                 InlineKeyboardButton("⭕️Subscribe⭕️", url='https://youtube.com/channel/UCFH_E0cu7U8GMjEJGnSvYjA')
+                 ],
+                 [
+                  InlineKeyboardButton("◈━━━━━━━━━━━━━◈", url='https://t.me/sinhalafilx'),
+                 ],
+                 [
+                  InlineKeyboardButton("🆘Help and commands🆘", url='https://t.me/sinhalafilx'),
+                 ],
+                ]
+)
 
 st_start = 'CAACAgIAAxkBAAEoL9Nldq4aMAUhIoKg2lMSQ6OfZERpCgACAQEAAladvQoivp8OuMLmNDME'
 st_loading ='CAACAgIAAx0CbhArBwACGAplfcuyOI9ys_e8Tqx9iPyhVD4GCgAC6BYAAv2LEEra9hZZ9LdRQB4E'
