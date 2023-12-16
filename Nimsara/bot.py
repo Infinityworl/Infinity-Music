@@ -121,8 +121,8 @@ CAPTION_TEXT = """
 🔥 **Uploaded By**: [ɪɴꜰɪɴɪᴛʏ](https://t.me/nimsar_a)**
 
    **[──ㅇＦｅｅｌ───ㅇ](https://t.me/sinhalafilx)**
-  **[ˡᶦᵏᵉ  ᶜᵒᵐᵐᵉⁿᵗ ˢᵃᵛᵉ](https://t.me/sinhalafilx)**
-"""
+  **[ˡᶦᵏᵉ  ᶜᵒᵐᵐᵉⁿᵗ ˢᵃᵛᵉ](https://t.me/sinhalafilx)** """
+
 
 CAPTION_BTN = InlineKeyboardMarkup(
             [[InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/Nimsar_a")]])
