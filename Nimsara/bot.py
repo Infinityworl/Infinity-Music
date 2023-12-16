@@ -118,10 +118,10 @@ CAPTION_TEXT = """
 ⭕ **ᴠɪᴇᴡꜱ:** `{}` 
 
 🧑‍🎤 **Requester:** {}
-🔥 **Uploaded By**: [ɪɴꜰɪɴɪᴛʏ](https://t.me/infinityx_lk)**
+🔥 **Uploaded By**: [ɪɴꜰɪɴɪᴛʏ](https://t.me/nimsar_a)**
 
-   **[♡ ㅤ   ❍ㅤ     ⎙ㅤ   ⌲](https://t.me/infinityx_lk)**
-  **[ˡᶦᵏᵉ   ᶜᵒᵐᵐᵉⁿᵗ  ˢᵃᵛᵉ    ˢʰᵃʳᵉ](https://t.me/infinityx_lk)**
+   **[0.00──ㅇＦｅｅｌ───ㅇ 0.00](https://t.me/sinhalafilx)**
+  **[ˡᶦᵏᵉ   ᶜᵒᵐᵐᵉⁿᵗ  ˢᵃᵛᵉ    ˢʰᵃʳᵉ](https://t.me/sinhalafilx)**
 """
 
 CAPTION_BTN = InlineKeyboardMarkup(
