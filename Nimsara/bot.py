@@ -206,7 +206,7 @@ async def songdown(_, message):
 
 
 
-# **{title}**
+#🏷 **Title:** [{title}]({link})
 
 #:---------------------------:
 #⏳ **Duration:** `{duration}`
