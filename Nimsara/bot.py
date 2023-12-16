@@ -120,7 +120,9 @@ CAPTION_TEXT = """
 🧑‍🎤 **Requester:** {}
 🔥 **Uploaded By**: [ɪɴꜰɪɴɪᴛʏ](https://t.me/infinityx_lk)**
 
-🌸 **ɪɴꜰɪɴɪᴛʏ**: [♡   ❍ㅤ ⎙ㅤ  ⌲](https://t.me/infinityx_lk)**"""
+🌸 **[♡ ㅤ  ❍ㅤ    ⎙ㅤ  ⌲](https://t.me/infinityx_lk)**
+    **[ˡᶦᵏᵉ   ᶜᵒᵐᵐᵉⁿᵗ  ˢᵃᵛᵉ    ˢʰᵃʳᵉ](https://t.me/infinityx_lk)**
+"""
 
 CAPTION_BTN = InlineKeyboardMarkup(
             [[InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/Nimsar_a")]])
