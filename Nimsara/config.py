@@ -13,8 +13,7 @@ REQ_ARIA= int(-1002062161170)
 CHAT = [int(ch) if id_pattern.search(ch) else ch for ch in '-1001885188788'.split()]
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in '1949037588'.split()]
 
-START_TEXT = "Hey {} 🌸 ᴛʜɪꜱ ɪꜱ ᴍᴏꜱᴛ ᴀᴅᴠᴀɴᴄᴇᴅ ᴍᴜꜱɪᴄ ꜰɪɴᴅᴇʀ ʙᴏᴛ, ᴋᴇʏᴡᴏʀᴅ ꜱᴇᴀʀᴄʜᴇʀꜱ & ᴀʟꜱᴏ ᴠᴏɪᴄᴇ ꜱᴇᴀʀᴄʜᴇʀꜱ ꜱᴜᴘᴘᴏʀᴛᴇᴅ 🌷
- ☘️"
+START_TEXT = "Hey {} 🌸 ᴛʜɪꜱ ɪꜱ ᴍᴏꜱᴛ ᴀᴅᴠᴀɴᴄᴇᴅ ᴍᴜꜱɪᴄ ꜰɪɴᴅᴇʀ ʙᴏᴛ, ᴋᴇʏᴡᴏʀᴅ ꜱᴇᴀʀᴄʜᴇʀꜱ & ᴀʟꜱᴏ ᴠᴏɪᴄᴇ ꜱᴇᴀʀᴄʜᴇʀꜱ ꜱᴜᴘᴘᴏʀᴛᴇᴅ 🌷 "
 START_BUTTON = InlineKeyboardMarkup(
                             [[
                                     InlineKeyboardButton('ᴅᴇᴠᴇʟᴏᴘᴇʀ' , url="https://t.me/Nimsar_a"),
