@@ -16,8 +16,10 @@ ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in '194903
 START_TEXT = "Hey {} 🌸 ᴛʜɪꜱ ɪꜱ ᴍᴏꜱᴛ ᴀᴅᴠᴀɴᴄᴇᴅ ᴍᴜꜱɪᴄ ꜰɪɴᴅᴇʀ ʙᴏᴛ, ᴋᴇʏᴡᴏʀᴅ ꜱᴇᴀʀᴄʜᴇʀꜱ & ᴀʟꜱᴏ ᴠᴏɪᴄᴇ ꜱᴇᴀʀᴄʜᴇʀꜱ ꜱᴜᴘᴘᴏʀᴛᴇᴅ 🌷 "
 START_BUTTON = InlineKeyboardMarkup(
                             [[
-                                    InlineKeyboardButton('ᴅᴇᴠᴇʟᴏᴘᴇʀ' , url="https://t.me/Nimsar_a"),
-                                    InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ʙᴇᴀᴜᴛʏ' , url="https://t.me/Nimsaraxbot?startgroup=true")
+                                    InlineKeyboardButton("Aʙᴏᴜᴛ ⚡", url="https://.t.me/about"),
+                                    InlineKeyboardButton("Cᴏɴᴛᴀᴄᴛ 🌐", url="https://t.me/Nimsar_a")
+                                    ],[
+                                    InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ 🍁", url="https://t.me/infinityworldlk")
                             ]]
                             )
 
