@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 APPID = "24008761"
 APIHASH = "c6bb29db832216220e1234b163233cec"
-BOTTOKEN = "6578576818:AAHss1_DP6DHt4_AmLUnsRrUnpU-nVw3yLY"
+BOTTOKEN = "6578576818:AAFNwk_M60LjwLQwWxsmGH6uMQ_QXDkWCq8"
 
 MONGO_URI = "mongodb+srv://nimsara:nimsara@cluster0.mgn7qqv.mongodb.net/?retryWrites=true&w=majority"
 BOT_USERNAME = "Nimsaraxbot"
