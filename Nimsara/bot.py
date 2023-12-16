@@ -137,7 +137,7 @@ async def downloadsong(m,st, message, vid_id, title, duration, performer, views)
     try:
         m = await m.edit(text=f"🌼 **𝔻𝕠𝕨𝕟𝕝𝕠𝕒𝕕𝕚𝕟𝕘 𝕐𝕠𝕦𝕣 𝕄𝕦𝕤𝕚𝕔**",
                          reply_markup=InlineKeyboardMarkup(
-                             [[InlineKeyboardButton("🌼 0:00 ──◁ 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 ▷── 0.00", callback_data="progress")]]))
+                             [[InlineKeyboardButton("🌼 0:00 ──◁ 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 ▷── 0.00...", callback_data="progress")]]))
         await bot.delete_messages(message.chat.id, [st.id])
         st2 = await message.reply_sticker(sticker=st_downloading)
 
