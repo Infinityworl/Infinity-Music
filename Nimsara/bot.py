@@ -41,8 +41,8 @@ REQ_BTNS = InlineKeyboardMarkup(
 #         return await add_served_chat(message.chat.id) 
 @bot.on_message(filters.command("start"))
 async def start(_, message):
-    if message.chat.type != "private":
-        await message.reply_text(message.chat.type)
+    if message.chat.type != "ChatType.PRIVATE":
+        await message.reply_text("group")
         st =await message.reply_sticker(sticker=st_start)
         st_id = st.id
         await asyncio.sleep(3)
@@ -57,6 +57,7 @@ async def start(_, message):
         await bot.delete_messages(message.chat.id, [st_id])
         return await add_served_chat(message.chat.id) 
     else:
+        await message.reply_text("pm")
         await bot.send_photo(
             message.from_user.id,
             "https://i.ibb.co/3zvHYPh/photo-2023-08-30-22-45-44.jpg",
