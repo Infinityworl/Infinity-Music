@@ -46,8 +46,8 @@ async def start(_, message):
         st_id = st.id
         await asyncio.sleep(3)
         await bot.send_photo(
-            photo='https://i.ibb.co/Bcx5564/image.png',
-            chat_id=message.from_user.id,
+            message.from_user.id,
+            'https://i.ibb.co/Bcx5564/image.png',
             caption = START_TEXT.format(message.from_user.mention),
             reply_markup = START_BUTTON)
         await bot.delete_messages(message.chat.id, [st_id])
