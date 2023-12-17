@@ -48,7 +48,7 @@ async def start(_, message):
         try:
             await bot.send_photo(
                 message.from_user.id,
-                'https://i.ibb.co/Bcx5564/image.png',
+                "https://i.ibb.co/Bcx5564/image.png",
                 caption = START_TEXT.format(message.from_user.mention),
                 reply_markup = START_BUTTON)
         except Exception as e:
