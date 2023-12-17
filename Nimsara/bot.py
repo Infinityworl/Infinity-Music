@@ -27,15 +27,28 @@ REQ_BTNS = InlineKeyboardMarkup(
                             ]]
                             )
 
+
+
+# if message.chat.type != "private":
+#         st =await message.reply_sticker(sticker=st_start)
+#         st_id = st.id
+#         await asyncio.sleep(3)
+#         await bot.send_message(
+#             message.chat.id,
+#             text = START_TEXT.format(message.from_user.mention),
+#             reply_markup = START_BUTTON)
+#         await bot.delete_messages(message.chat.id, [st_id])
+#         return await add_served_chat(message.chat.id) 
 @bot.on_message(filters.command("start"))
 async def start(_, message):
     if message.chat.type != "private":
         st =await message.reply_sticker(sticker=st_start)
         st_id = st.id
         await asyncio.sleep(3)
-        await bot.send_message(
-            message.chat.id,
-            text = START_TEXT.format(message.from_user.mention),
+        await bot.send_photo(
+            photo='https://i.ibb.co/Bcx5564/image.png',
+            chat_id=message.from_user.id,
+            caption = START_TEXT.format(message.from_user.mention),
             reply_markup = START_BUTTON)
         await bot.delete_messages(message.chat.id, [st_id])
         return await add_served_chat(message.chat.id) 
