@@ -42,7 +42,7 @@ async def start(_, message):
     else:
         await bot.send_photo(
             photo='https://i.ibb.co/Bcx5564/image.png',
-            message.from_user.id,
+            chat_id=message.from_user.id,
             caption = START_TEXT.format(message.from_user.mention),
             reply_markup = START_BUTTON)
     return await add_served_user(message.from_user.id)
