@@ -48,7 +48,7 @@ async def start(_, message):
         await asyncio.sleep(3)
         try:
             await bot.send_photo(
-                message.from_user.id,
+                message.chat.id,
                 "https://i.ibb.co/3zvHYPh/photo-2023-08-30-22-45-44.jpg",
                 caption = START_TEXT.format(message.from_user.mention),
                 reply_markup = START_BUTTON)
