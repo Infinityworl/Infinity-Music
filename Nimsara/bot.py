@@ -42,6 +42,7 @@ REQ_BTNS = InlineKeyboardMarkup(
 @bot.on_message(filters.command("start"))
 async def start(_, message):
     if message.chat.type != "private":
+        await message.reply_text(message)
         st =await message.reply_sticker(sticker=st_start)
         st_id = st.id
         await asyncio.sleep(3)
