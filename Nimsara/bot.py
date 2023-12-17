@@ -49,7 +49,7 @@ async def start(_, message):
         try:
             await bot.send_photo(
                 message.chat.id,
-                "https://i.ibb.co/3zvHYPh/photo-2023-08-30-22-45-44.jpg",
+                img_start,
                 caption = START_TEXT.format(message.from_user.mention),
                 reply_markup = START_BUTTON)
         except Exception as e:
@@ -60,7 +60,7 @@ async def start(_, message):
         # await message.reply_text("private chat⚠️")
         await bot.send_photo(
             message.from_user.id,
-            "https://i.ibb.co/3zvHYPh/photo-2023-08-30-22-45-44.jpg",
+            img_start,
             caption = START_TEXT.format(message.from_user.mention),
             reply_markup = START_BUTTON)
     return await add_served_user(message.from_user.id)
