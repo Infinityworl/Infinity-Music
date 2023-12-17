@@ -40,9 +40,10 @@ async def start(_, message):
         await bot.delete_messages(message.chat.id, [st_id])
         return await add_served_chat(message.chat.id) 
     else:
-        await bot.send_message(
+        await bot.send_photo(
+            photo='https://i.ibb.co/Bcx5564/image.png',
             message.from_user.id,
-            text = START_TEXT.format(message.from_user.mention),
+            caption = START_TEXT.format(message.from_user.mention),
             reply_markup = START_BUTTON)
     return await add_served_user(message.from_user.id)
 
