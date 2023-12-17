@@ -52,7 +52,7 @@ async def start(_, message):
                 caption = START_TEXT.format(message.from_user.mention),
                 reply_markup = START_BUTTON)
         except Exception as e:
-            await m.edit(f"**⚠️Unexpected Error⚠️**\n\n`{str(e)}`")
+            await message.reply_text(f"**⚠️Unexpected Error⚠️**\n\n`{str(e)}`")
         await bot.delete_messages(message.chat.id, [st_id])
         return await add_served_chat(message.chat.id) 
     else:
