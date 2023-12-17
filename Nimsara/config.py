@@ -17,14 +17,14 @@ START_TEXT = "Hey {} 🌸 ᴛʜɪꜱ ɪꜱ ᴍᴏꜱᴛ ᴀᴅᴠᴀɴᴄᴇᴅ 
 START_BUTTON = InlineKeyboardMarkup(
                 [
                  [
-                 InlineKeyboardButton("𝐂𝐡𝐚𝐭 𝐆𝐫𝐨𝐮𝐩", url='https://t.me/ItsMeSithija'),
-                 InlineKeyboardButton("𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫", url='https://youtube.com/channel/UCFH_E0cu7U8GMjEJGnSvYjA')
+                 InlineKeyboardButton("⭕ 𝐂𝐡𝐚𝐭 𝐆𝐫𝐨𝐮𝐩 ⭕", url='https://t.me/Musicx_lk'),
+                 InlineKeyboardButton("✨️ 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫 ✨️", url='https://t.me/nimsar_a')
                  ],
                  [
-                  InlineKeyboardButton("ᴀᴅᴅ ᴍᴇ ʙᴇᴀᴜᴛʏ", url='https://t.me/Nimsaraxbot?startgroup=true'),
+                  InlineKeyboardButton("🌸 ᴀᴅᴅ ᴍᴇ ʙᴇᴀᴜᴛʏ 🌸", url='https://t.me/Nimsaraxbot?startgroup=true'),
                  ],
                  [
-                  InlineKeyboardButton("ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ", url='https://t.me/sinhalafilx'),
+                  InlineKeyboardButton("🌼 ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ 🌼", url='https://t.me/sinhalafilx'),
                  ],
                 ]
 )
