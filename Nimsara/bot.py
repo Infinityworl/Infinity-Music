@@ -58,12 +58,15 @@ async def start(_, message):
         return await add_served_chat(message.chat.id) 
     else:
         # await message.reply_text("private chat⚠️")
+        try:
         await bot.send_photo(
             message.from_user.id,
             img_start,
             caption = START_TEXT.format(message.from_user.mention),
             reply_markup = START_BUTTON)
-    return await add_served_user(message.from_user.id)
+            return await add_served_user(message.from_user.id)
+        except Exception as e:
+            await message.reply_text(f"**⚠️Unexpected Error⚠️**\n\n`{str(e)}`")
 
 @bot.on_callback_query(filters.regex("pending"))
 async def pending(_, query):
