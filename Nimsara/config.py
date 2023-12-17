@@ -28,7 +28,7 @@ START_BUTTON = InlineKeyboardMarkup(
                  ],
                 ]
 )
-
+img_start = "https://i.ibb.co/3zvHYPh/photo-2023-08-30-22-45-44.jpg"
 st_start = 'CAACAgIAAxkBAAEoL9Nldq4aMAUhIoKg2lMSQ6OfZERpCgACAQEAAladvQoivp8OuMLmNDME'
 st_loading ='CAACAgIAAx0CbhArBwACGAplfcuyOI9ys_e8Tqx9iPyhVD4GCgAC6BYAAv2LEEra9hZZ9LdRQB4E'
 st_downloading = 'CAACAgEAAxkBAAEoMFNldsx2wvR-Lfgn--vsCqFpdoCl3QACBAYAAm5PKEe-rP_0rU2xITME'
