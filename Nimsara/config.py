@@ -18,7 +18,7 @@ START_BUTTON = InlineKeyboardMarkup(
                 [
                  [
                  InlineKeyboardButton("⭕ 𝐂𝐡𝐚𝐭 𝐆𝐫𝐨𝐮𝐩 ⭕", url='https://t.me/Musicx_lk'),
-                 InlineKeyboardButton("✨️ 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫 ✨️", url='https://t.me/nimsar_a')
+                 InlineKeyboardButton("✨️ 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫 ✨️", callback_data='helpmenu')
                  ],
                  [
                   InlineKeyboardButton("🌸 ᴀᴅᴅ ᴍᴇ ʙᴇᴀᴜᴛʏ 🌸", url='https://t.me/Nimsaraxbot?startgroup=true'),
@@ -27,6 +27,31 @@ START_BUTTON = InlineKeyboardMarkup(
                   InlineKeyboardButton("🌼 ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ 🌼", url='https://t.me/sinhalafilx'),
                  ],
                 ]
+)
+
+
+HELP_TEXT = """ Hey there☄️
+I have some fun and useful tools
+So you can get a help about them🚀 """
+
+HELP_BUTTON = InlineKeyboardMarkup(
+               [
+                [
+                 InlineKeyboardButton("song", callback_data='songmenu'),
+                ],
+)                
+
+SONG_TEXT = """
+🎧Help for song download🎧
+
+Available commands
+❥ /song {song name} - Download a song simply.
+❥ /song {youtube link} - Download song using youtube link.
+"""
+SONG_BUTTON = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('🔙Back', callback_data='helpmenu')
+        ]]
 )
 
 st_start = 'CAACAgIAAxkBAAEoL9Nldq4aMAUhIoKg2lMSQ6OfZERpCgACAQEAAladvQoivp8OuMLmNDME'
