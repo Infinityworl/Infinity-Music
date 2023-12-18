@@ -49,19 +49,19 @@ async def download_song(m, st, message, vid_id, title, duration, performer, view
         
     """
 
-caption_text = """
-**{}**
+# caption_text = """
+# **{}**
 
-🍁 **ᴅᴜʀᴀᴛɪᴏɴ:** {}
-🌸 **ᴄʜᴀɴɴᴇʟ:** [{}](https://youtube.com/watch?v={})
-⭕ **ᴠɪᴇᴡꜱ:** `{}` 
+# 🍁 **ᴅᴜʀᴀᴛɪᴏɴ:** {}
+# 🌸 **ᴄʜᴀɴɴᴇʟ:** [{}](https://youtube.com/watch?v={})
+# ⭕ **ᴠɪᴇᴡꜱ:** `{}` 
 
-🧑‍🎤 **Requester:** {}
-🔥 **Uploaded By**: [ɪɴꜰɪɴɪᴛʏ](https://t.me/nimsar_a)**
+# 🧑‍🎤 **Requester:** {}
+# 🔥 **Uploaded By**: [ɪɴꜰɪɴɪᴛʏ](https://t.me/nimsar_a)**
 
-  **[0.0──ㅇＦｅｅｌ───ㅇ 0.1](https://t.me/sinhalafilx)**
-  **[ˡᶦᵏᵉ   ᶜᵒᵐᵐᵉⁿᵗ  ˢᵃᵛᵉ    ˢʰᵃʳᵉ](https://t.me/sinhalafilx)**
-"""
+#   **[0.0──ㅇＦｅｅｌ───ㅇ 0.1](https://t.me/sinhalafilx)**
+#   **[ˡᶦᵏᵉ   ᶜᵒᵐᵐᵉⁿᵗ  ˢᵃᵛᵉ    ˢʰᵃʳᵉ](https://t.me/sinhalafilx)**
+# """
     await context.bot.edit_message_text(chat_id=message.chat_id, message_id=m.message_id, text=text.format("Downloading...",title, vid_id, duration, performer, views), parse_mode='Markdown',disable_web_page_preview=True)
     try:
         
