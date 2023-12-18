@@ -3,4 +3,4 @@ build:
     web: Dockerfile
 
 run:
-  web: python Nimsara/bot.py
+  web: python Nimsara/__main__.py
