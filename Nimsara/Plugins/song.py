@@ -1,12 +1,12 @@
 from telegram import Update
 from telegram.ext import ContextTypes
-from pytube.exceptions import AgeRestrictedError, LiveStreamError, VideoPrivate
 from youtube_search import YoutubeSearch
 from pytube import YouTube
 import requests
 import asyncio
 import re
 import os
+from config import *
 
 async def handle_song(update: Update, context: ContextTypes.DEFAULT_TYPE):
     message = update.message
