@@ -24,7 +24,7 @@ async def handle_song(update: Update, context: ContextTypes.DEFAULT_TYPE):
             duration = results[0]["duration"]
             performer = results[0]["channel"]
             views = results[0]["views"]
-            views = re.search(r'\d+', views).group()
+            # views = re.search(r'\d+', views).group()
             # await downloadsong(m,st, message, vid_id, title, duration, performer, views)
             print(vid_id, title, duration, performer, views)
 
