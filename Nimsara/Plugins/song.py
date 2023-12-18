@@ -91,7 +91,7 @@ async def download_song(m, st, message, vid_id, title, duration, performer, view
         first, last = os.path.splitext(down)
         song = first + '.mp3'
         os.rename(down, song)
-        await context.bot.edit_message_text(chat_id=message.chat_id, message_id=m.message_id, text=text.format("Download Completed",title, vid_id, duration, performer, views), parse_mode='Markdown')
+        await context.bot.edit_message_text(chat_id=message.chat_id, message_id=m.message_id, text=text.format("Download Completed",title, vid_id, duration, performer, views), parse_mode='Markdown',reply_markup=None)
         st3 = await context.bot.send_sticker(chat_id=message.chat_id, sticker=st_uploading)
         temp.append(st3.message_id)
         await context.bot.delete_message(chat_id=message.chat_id, message_id=st2.message_id)
