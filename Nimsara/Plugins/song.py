@@ -30,6 +30,7 @@ async def handle_song(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     except Exception as e:
         await context.bot.edit_message_text(chat_id=message.chat_id, message_id=m.message_id, text=f"**Nothing Found** [{message.from_user.first_name}](tg://user?id={message.from_user.id})" , parse_mode='Markdown')
+        await context.bot.delete_message(chat_id=message.chat_id, message_id=st.message_id)
     await download_song(m, st, message, vid_id, title, duration, performer, views,context)
     
 temp = []
