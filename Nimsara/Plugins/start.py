@@ -9,7 +9,7 @@ async def start_command(update: Update,context: ContextTypes.DEFAULT_TYPE):
     photo = img_start
     caption = f"ʜᴇʏ {user} 🌸 ᴛʜɪꜱ ɪꜱ ᴍᴏꜱᴛ ᴀᴅᴠᴀɴᴄᴇᴅ ᴍᴜꜱɪᴄ ꜰɪɴᴅᴇʀ ʙᴏᴛ, ᴋᴇʏᴡᴏʀᴅ ꜱᴇᴀʀᴄʜᴇʀꜱ & ᴀʟꜱᴏ ᴠᴏɪᴄᴇ ꜱᴇᴀʀᴄʜᴇʀꜱ ꜱᴜᴘᴘᴏʀᴛᴇᴅ 🌷"
     inline_keyboard = [
-        [InlineKeyboardButton('⭕ 𝐂𝐡𝐚𝐭 𝐆𝐫𝐨𝐮𝐩 ⭕ʟ', url=f"https://t.me/Musicx_lk"),InlineKeyboardButton('✨️ 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫 ✨️', url=f"https://t.me/nimsar_a")],
+        [InlineKeyboardButton('⭕ 𝐂𝐡𝐚𝐭 𝐆𝐫𝐨𝐮𝐩 ⭕', url=f"https://t.me/Musicx_lk"),InlineKeyboardButton('✨️ 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫 ✨️', url=f"https://t.me/nimsar_a")],
         [InlineKeyboardButton('🌸 ᴀᴅᴅ ᴍᴇ ʙᴇᴀᴜᴛʏ 🌸', url=f"http://t.me/{BOT_USERNAME}?startgroup=true")],
         [InlineKeyboardButton('🌼 ꜱᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ 🌼', url=f"https://t.me/sinhalafilx")]
             ]
