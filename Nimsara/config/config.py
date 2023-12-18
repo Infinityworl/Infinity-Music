@@ -1,4 +1,4 @@
-TOKEN = "6578576818:AAHz-9xob53AaS-VnCmam7wPBnsLo6qXmcs"
+TOKEN = "6578576818:AAF9ClIdryjMQnL1ib3f2_1BBzg-EDpAzbg"
 MONGO_URI = "mongodb+srv://nimsara:nimsara@cluster0.mgn7qqv.mongodb.net/?retryWrites=true&w=majority"
 BOT_USERNAME = "Nimsaraxbot"
 
