@@ -65,7 +65,11 @@ async def download_song(m, st, message, vid_id, title, duration, performer, view
   **[0.0──ㅇＦｅｅｌ───ㅇ 0.1](https://t.me/sinhalafilx)**
   **[ˡᶦᵏᵉ   ᶜᵒᵐᵐᵉⁿᵗ  ˢᵃᵛᵉ    ˢʰᵃʳᵉ](https://t.me/sinhalafilx)**
 """
-    await context.bot.edit_message_text(chat_id=message.chat_id, message_id=m.message_id, text=text.format("Downloading...",title, vid_id, duration, performer, views), parse_mode='Markdown',disable_web_page_preview=True)
+    downloading = [
+        [InlineKeyboardButton('🌼 0:00 ──◁ 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 ▷── 0.00...', callback_data="progress")]
+            ]
+    download_button=InlineKeyboardMarkup(downloading)
+    await context.bot.edit_message_text(chat_id=message.chat_id, message_id=m.message_id, text=text=f"🌼 **𝔻𝕠𝕨𝕟𝕝𝕠𝕒𝕕𝕚𝕟𝕘 𝕐𝕠𝕦𝕣 𝕄𝕦𝕤𝕚𝕔**", parse_mode='Markdown',reply_markup=download_button,disable_web_page_preview=True)
     try:
         
         st2 = await context.bot.send_sticker(chat_id=message.chat_id, sticker=st_downloading)
