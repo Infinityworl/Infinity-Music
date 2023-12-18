@@ -73,7 +73,8 @@ async def download_song(m, st, message, vid_id, title, duration, performer, view
         [InlineKeyboardButton('🌸 🅄🄿🄻🄾🄰🄳🄸🄽🄶 🅃🄴🄻🄴🄶🅁🄰🄼...', callback_data="progress")]
             ]
     upload_button=InlineKeyboardMarkup(uploading)
-    await context.bot.edit_message_text(chat_id=message.chat_id, message_id=m.message_id, text=f"🌼 **𝔻𝕠𝕨𝕟𝕝𝕠𝕒𝕕𝕚𝕟𝕘 𝕐𝕠𝕦𝕣 𝕄𝕦𝕤𝕚𝕔**", parse_mode='Markdown',reply_markup=download_button,disable_web_page_preview=True)
+    
+    await context.bot.edit_message_text(chat_id=message.chat_id, message_id=m.message_id, text=text.format("🌼 **𝔻𝕠𝕨𝕟𝕝𝕠𝕒𝕕𝕚𝕟𝕘 𝕐𝕠𝕦𝕣 𝕄𝕦𝕤𝕚𝕔**",title, vid_id, duration, performer, views), parse_mode='Markdown',reply_markup=download_button,disable_web_page_preview=True)
     try:
         
         st2 = await context.bot.send_sticker(chat_id=message.chat_id, sticker=st_downloading)
@@ -90,12 +91,13 @@ async def download_song(m, st, message, vid_id, title, duration, performer, view
         first, last = os.path.splitext(down)
         song = first + '.mp3'
         os.rename(down, song)
-        await context.bot.edit_message_text(chat_id=message.chat_id, message_id=m.message_id, text="Download Completed", parse_mode='Markdown')
+        await context.bot.edit_message_text(chat_id=message.chat_id, message_id=m.message_id, text=text.format("Download Completed",title, vid_id, duration, performer, views), parse_mode='Markdown')
         st3 = await context.bot.send_sticker(chat_id=message.chat_id, sticker=st_uploading)
         temp.append(st3.message_id)
         await context.bot.delete_message(chat_id=message.chat_id, message_id=st2.message_id)
         temp.remove(st2.message_id)
-        await context.bot.edit_message_text(chat_id=message.chat_id, message_id=m.message_id, text="🌸 𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐒𝐞𝐯𝐞𝐫...", parse_mode='Markdown',reply_markup=upload_button)
+        
+        await context.bot.edit_message_text(chat_id=message.chat_id, message_id=m.message_id, text=text.format("🌸 𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐒𝐞𝐯𝐞𝐫...",title, vid_id, duration, performer, views), parse_mode='Markdown',reply_markup=upload_button)
         user = f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
         # format(f"Uploaded By ",title, vid_id, duration, performer, views)
         inline_keyboard = [
