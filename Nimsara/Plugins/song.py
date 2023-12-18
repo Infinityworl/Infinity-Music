@@ -48,6 +48,20 @@ async def download_song(m, st, message, vid_id, title, duration, performer, view
 └ Views : {} 
         
     """
+
+caption = """
+**{}**
+
+🍁 **ᴅᴜʀᴀᴛɪᴏɴ:** {}
+🌸 **ᴄʜᴀɴɴᴇʟ:** [{}]({})
+⭕ **ᴠɪᴇᴡꜱ:** `{}` 
+
+🧑‍🎤 **Requester:** {}
+🔥 **Uploaded By**: [ɪɴꜰɪɴɪᴛʏ](https://t.me/nimsar_a)**
+
+  **[0.0──ㅇＦｅｅｌ───ㅇ 0.1](https://t.me/sinhalafilx)**
+  **[ˡᶦᵏᵉ   ᶜᵒᵐᵐᵉⁿᵗ  ˢᵃᵛᵉ    ˢʰᵃʳᵉ](https://t.me/sinhalafilx)**
+"""
     await context.bot.edit_message_text(chat_id=message.chat_id, message_id=m.message_id, text=text.format("Downloading...",title, vid_id, duration, performer, views), parse_mode='Markdown',disable_web_page_preview=True)
     try:
         
@@ -70,8 +84,8 @@ async def download_song(m, st, message, vid_id, title, duration, performer, view
         temp.append(st3.message_id)
         await context.bot.delete_message(chat_id=message.chat_id, message_id=st2.message_id)
         await context.bot.edit_message_text(chat_id=message.chat_id, message_id=m.message_id, text=text.format("Uploading...",title, vid_id, duration, performer, views), parse_mode='Markdown',disable_web_page_preview=True)
-
-        await context.bot.send_audio(chat_id=message.chat_id, audio=song,thumbnail=thumbloc, caption=text.format(f"Uploaded By [{message.from_user.first_name}](tg://user?id={message.from_user.id})",title, vid_id, duration, performer, views), reply_to_message_id=message.message_id, parse_mode='Markdown')
+        # format(f"Uploaded By [{message.from_user.first_name}](tg://user?id={message.from_user.id})",title, vid_id, duration, performer, views)
+        await context.bot.send_audio(chat_id=message.chat_id, audio=song,thumbnail=thumbloc, caption=caption.format((title, duration, performer,f"https://youtu.be/{vid_id}", views,[{message.from_user.first_name}](tg://user?id={message.from_user.id})), reply_to_message_id=message.message_id, parse_mode='Markdown')
 
         await context.bot.delete_message(chat_id=message.chat_id, message_id=m.message_id)
         await context.bot.delete_message(chat_id=message.chat_id, message_id=st3.message_id)
