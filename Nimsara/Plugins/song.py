@@ -53,7 +53,7 @@ caption_text = """
 **{}**
 
 🍁 **ᴅᴜʀᴀᴛɪᴏɴ:** {}
-🌸 **ᴄʜᴀɴɴᴇʟ:** [{}]({})
+🌸 **ᴄʜᴀɴɴᴇʟ:** [{}](https://youtu.be/{})
 ⭕ **ᴠɪᴇᴡꜱ:** `{}` 
 
 🧑‍🎤 **Requester:** {}
@@ -86,7 +86,7 @@ caption_text = """
         await context.bot.edit_message_text(chat_id=message.chat_id, message_id=m.message_id, text=text.format("Uploading...",title, vid_id, duration, performer, views), parse_mode='Markdown',disable_web_page_preview=True)
         user = [{message.from_user.first_name}](tg://user?id={message.from_user.id})
         # format(f"Uploaded By ",title, vid_id, duration, performer, views)
-        await context.bot.send_audio(chat_id=message.chat_id, audio=song,thumbnail=thumbloc, caption=caption_text.format(title, duration, performer,f"https://youtu.be/{vid_id}", views,user), reply_to_message_id=message.message_id, parse_mode='Markdown')
+        await context.bot.send_audio(chat_id=message.chat_id, audio=song,thumbnail=thumbloc, caption=caption_text.format(title, duration, performer,vid_id, views,user), reply_to_message_id=message.message_id, parse_mode='Markdown')
 
         await context.bot.delete_message(chat_id=message.chat_id, message_id=m.message_id)
         await context.bot.delete_message(chat_id=message.chat_id, message_id=st3.message_id)
