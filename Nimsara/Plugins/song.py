@@ -20,6 +20,9 @@ async def handle_song(update: Update, context: ContextTypes.DEFAULT_TYPE):
             name = message.text.split(None, 1)[1]
             results = YoutubeSearch(name, max_results=1).to_dict()
             title = results[0]["title"]
+            title = title.replace("[", "\[")
+            title = title.replace("[", "\]")
+            
             vid_id = results[0]["id"]
             duration = results[0]["duration"]
             performer = results[0]["channel"]
