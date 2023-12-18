@@ -15,18 +15,19 @@ async def handle_song(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if len(update.message.text) < 5:
             await message.reply_text("Give a song name brother  ⚠️")
             return 
-        m = await message.reply_text("🔎 Searching ...")
-        st =await message.reply_sticker(sticker=st_loading)
-        name = message.text.split(None, 1)[1]
-        results = YoutubeSearch(name, max_results=1).to_dict()
-        title = results[0]["title"]
-        vid_id = results[0]["id"]
-        duration = results[0]["duration"]
-        performer = results[0]["channel"]
-        views = results[0]["views"]
-        views = re.search(r'\d+', views).group()
-        # await downloadsong(m,st, message, vid_id, title, duration, performer, views)
-        print(vid_id, title, duration, performer, views)
+        else:
+            m = await message.reply_text("🔎 Searching ...")
+            st =await message.reply_sticker(sticker=st_loading)
+            name = message.text.split(None, 1)[1]
+            results = YoutubeSearch(name, max_results=1).to_dict()
+            title = results[0]["title"]
+            vid_id = results[0]["id"]
+            duration = results[0]["duration"]
+            performer = results[0]["channel"]
+            views = results[0]["views"]
+            views = re.search(r'\d+', views).group()
+            # await downloadsong(m,st, message, vid_id, title, duration, performer, views)
+            print(vid_id, title, duration, performer, views)
 
     except Exception as e:
         await context.bot.edit_message_text(chat_id=message.chat_id, message_id=m.message_id, text=f"**Nothing Found** [{message.from_user.first_name}](tg://user?id={message.from_user.id})" , parse_mode='Markdown')
