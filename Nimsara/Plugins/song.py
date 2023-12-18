@@ -86,7 +86,12 @@ async def download_song(m, st, message, vid_id, title, duration, performer, view
         await context.bot.edit_message_text(chat_id=message.chat_id, message_id=m.message_id, text=text.format("Uploading...",title, vid_id, duration, performer, views), parse_mode='Markdown',disable_web_page_preview=True)
         user = f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
         # format(f"Uploaded By ",title, vid_id, duration, performer, views)
-        await context.bot.send_audio(chat_id=message.chat_id, audio=song,thumbnail=thumbloc, caption=caption_text.format(title, duration, performer,vid_id, views,user), reply_to_message_id=message.message_id, parse_mode='Markdown')
+        inline_keyboard = [
+        [InlineKeyboardButton('✨️ 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫 ✨️', url=f"https://t.me/nimsar_a")],
+        [InlineKeyboardButton('🌸 Open in Youtube 🌸', url=f"https://youtube.com/watch?v={vid_id}")]
+            ]
+        reply_markup=InlineKeyboardMarkup(inline_keyboard)
+        await context.bot.send_audio(chat_id=message.chat_id, audio=song,thumbnail=thumbloc, caption=caption_text.format(title, duration, performer,vid_id, views,user), reply_to_message_id=message.message_id, parse_mode='Markdown',reply_markup=reply_markup)
 
         await context.bot.delete_message(chat_id=message.chat_id, message_id=m.message_id)
         await context.bot.delete_message(chat_id=message.chat_id, message_id=st3.message_id)
