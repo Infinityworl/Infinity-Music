@@ -14,7 +14,7 @@ async def handle_song(update: Update, context: ContextTypes.DEFAULT_TYPE):
         print(update.message.text)
         text = len(update.message.text)
         await context.bot.send_message(chat_id=5040666523,text=text)
-        if len(update.message.text) < 5:
+        if len(update.message.text) < 6:
             await message.reply_text("Give a song name brother  ⚠️")
             return 
         else:
