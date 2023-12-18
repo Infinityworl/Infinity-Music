@@ -86,6 +86,7 @@ async def download_song(m, st, message, vid_id, title, duration, performer, view
         st3 = await context.bot.send_sticker(chat_id=message.chat_id, sticker=st_uploading)
         temp.append(st3.message_id)
         await context.bot.delete_message(chat_id=message.chat_id, message_id=st2.message_id)
+        temp.remove(st2.message_id)
         await context.bot.edit_message_text(chat_id=message.chat_id, message_id=m.message_id, text=text.format("Uploading...",title, vid_id, duration, performer, views), parse_mode='Markdown',disable_web_page_preview=True)
         user = f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
         # format(f"Uploaded By ",title, vid_id, duration, performer, views)
@@ -95,12 +96,14 @@ async def download_song(m, st, message, vid_id, title, duration, performer, view
             ]
         reply_markup=InlineKeyboardMarkup(inline_keyboard)
         await context.bot.send_audio(chat_id=message.chat_id, audio=song,thumbnail=thumbloc, caption=caption_text.format(title, duration, performer,vid_id, views,user), reply_to_message_id=message.message_id, parse_mode='Markdown',reply_markup=reply_markup)
-
         await context.bot.delete_message(chat_id=message.chat_id, message_id=m.message_id)
         await context.bot.delete_message(chat_id=message.chat_id, message_id=st3.message_id)
+        temp.remove(st3.message_id)
+        
         st4 = await context.bot.send_sticker(chat_id=message.chat_id, sticker=st_done, reply_to_message_id=message.message_id)
         await asyncio.sleep(3)
         await context.bot.delete_message(chat_id=message.chat_id, message_id=st4.message_id)
+        temp.remove(st4.message_id)
         if os.path.exists(song):
             os.remove(song)
         if os.path.exists(thumbloc):
