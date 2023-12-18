@@ -13,7 +13,7 @@ async def force_sub_chanel(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if member in ('kicked' , 'left' , 'restricted'):
         photo="https://i.ibb.co/3zvHYPh/photo-2023-08-30-22-45-44.jpg"
-        reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇꜱ", url="https://t.me/pc_games_4_u")]])
+        reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("ɪɴꜰɪɴɪᴛʏ ᴍᴏᴠɪᴇꜱ", url="https://t.me/sinhalafilx")]])
         text =f"{user_profile_link}, \n\n🚫  ᴛᴏ ᴜsᴇ ᴛʜɪs ʙᴏᴛ, ʏᴏᴜ ᴍᴜsᴛ ᴊᴏɪɴ ᴏᴜʀ ᴄʜᴀɴɴᴇʟ"
         await update.message.reply_photo(caption=text, reply_markup=reply_markup,photo=photo,parse_mode='Markdown')
         return False 
