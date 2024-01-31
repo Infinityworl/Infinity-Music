@@ -58,7 +58,7 @@ async def get_results(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 await context.bot.edit_message_text(chat_id=message.chat_id, message_id=m.message_id, text=f"**Nothing Found** [{message.from_user.first_name}](tg://user?id={message.from_user.id})" , parse_mode='Markdown')
                 await context.bot.delete_message(chat_id=message.chat_id, message_id=st.message_id)
                 mid = m.message_id
-                task = asyncio.create_task(delete_message(chat_id, mid,10 , context))
+                # task = asyncio.create_task(delete_message(chat_id, mid,10 , context))
             except:
                 pass
 
