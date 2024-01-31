@@ -2,12 +2,18 @@ from telegram import  Update ,InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ContextTypes
 
 import asyncio
-
-from help_functions import mention
 from Database import add_served_user , add_served_chat
 from config import img_start as LOGO
 
-
+async def mention(user_id,context: ContextTypes.DEFAULT_TYPE):
+    user = await context.bot.get_chat(user_id)
+    first_name = first_name.replace("[", "")
+    first_name = first_name.replace("]", "")
+    first_name = first_name.replace("(", "")
+    first_name = first_name.replace(")", "")
+    mention = f"[{first_name}](tg://user?id={user_id})"
+    return mention
+    
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     command = context.args[0] if context.args else ''
