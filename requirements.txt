@@ -7,3 +7,8 @@ motor==3.3.2
 pytube==15.0.0
 requests==2.31.0
 python-telegram-bot==20.7
+yt-dlp==2023.11.16
+ffmpeg-python
+ffprobe-python
+youtube-search-python
+moviepy
