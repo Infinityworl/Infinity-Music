@@ -3,7 +3,7 @@ from config import MONGO_URI, BOT_USERNAME
 
 client = pymongo.MongoClient(MONGO_URI )
 db = client[BOT_USERNAME]
-userdb = db["users"]
+database = db["users"]
 
 #===================== User database ================================
 
