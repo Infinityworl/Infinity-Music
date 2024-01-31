@@ -7,6 +7,7 @@ from config import img_start as LOGO
 
 async def mention(user_id,context: ContextTypes.DEFAULT_TYPE):
     user = await context.bot.get_chat(user_id)
+    first_name = user.first_name
     first_name = first_name.replace("[", "")
     first_name = first_name.replace("]", "")
     first_name = first_name.replace("(", "")
