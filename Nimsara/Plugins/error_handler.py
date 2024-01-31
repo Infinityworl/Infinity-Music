@@ -7,7 +7,7 @@
 from telegram import Update
 from telegram.ext import ContextTypes
 
-async def price_error(update:Update, context: ContextTypes.DEFAULT_TYPE):
+async def error_handler(update:Update, context: ContextTypes.DEFAULT_TYPE):
     e = context.error
     func = 'in main'
     await handle_errors(update, context, e , func)
