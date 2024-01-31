@@ -11,9 +11,9 @@ def error(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 if __name__ == '__main__':
     app = Application.builder().token(TOKEN).build()
-    app.add_handler(CommandHandler('start', start_command))
-    app.add_handler(CommandHandler('help', help_command))
-    app.add_handler(CommandHandler('song', handle_song))
+    # app.add_handler(CommandHandler('start', start_command))
+    # app.add_handler(CommandHandler('help', help_command))
+    # app.add_handler(CommandHandler('song', handle_song))
     app.add_error_handler(error)
     print('Polling...')
     app.run_polling(poll_interval=5)
