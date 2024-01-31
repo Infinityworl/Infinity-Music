@@ -32,7 +32,7 @@ async def start_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
     BOT_NAME = bot.username
     user_id = update.effective_user.id
     user  = await mention(user_id,context)
-    caption = f'ʜᴇʏ {user} !'
+    caption = f'🌷 ʜɪ {user} ᴛʜɪꜱ ɪꜱ ᴍᴏꜱᴛ ᴀᴅᴠᴀɴᴄᴇᴅ ᴍᴜꜱɪᴄ ꜰɪɴᴅᴇʀ ʙᴏᴛ, ᴋᴇʏᴡᴏʀᴅ ꜱᴇᴀʀᴄʜᴇʀꜱ & ᴀʟꜱᴏ ᴠᴏɪᴄᴇ ꜱᴇᴀʀᴄʜᴇʀꜱ ꜱᴜᴘᴘᴏʀᴛᴇᴅ 😍 '
     
     inline_keyboard = [
         [InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀᴛ ➕', url=f"http://t.me/{BOT_NAME}?startgroup=true")],
