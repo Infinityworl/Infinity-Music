@@ -5,7 +5,8 @@ from config import TOKEN
 
 print('Starting up bot...')
 
-
+async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("hello")
 def error(update: Update, context: ContextTypes.DEFAULT_TYPE):
     print(f'Update {update} caused error {context.error}')
 
