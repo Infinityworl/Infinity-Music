@@ -1,11 +1,6 @@
-#=================================================================================================
-# Copyright (C) 2022 by szsupunma@Github, < https://github.com/szsupunma >.
-# Released under the "GNU v3.0 License Agreement".
-# All rights reserved.
-#=================================================================================================
 import os
-from config import MONGO_URI, BOT_USERNAME
-from motor.motor_asyncio import AsyncIOMotorClient
+# from config import MONGO_URI, BOT_USERNAME
+# from motor.motor_asyncio import AsyncIOMotorClient
 
 
 mongo_client = AsyncIOMotorClient(MONGO_URI)
