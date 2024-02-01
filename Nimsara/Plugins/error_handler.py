@@ -16,7 +16,7 @@ async def error_handler(update:Update, context: ContextTypes.DEFAULT_TYPE):
      
 async def handle_errors(update:Update, context: ContextTypes.DEFAULT_TYPE, e , func):
     msg = await generate_msg(update,context,e,func)
-    msg = f"{msg}\n\nᴄᴇʀʀᴏʀ ʜᴀɴᴅʟᴇʀ ᴠ𝟸\n\nᴏᴘʏʀɪɢʜᴛ © 𝟸𝟶𝟸𝟹-𝟸𝟶𝟸𝟺 ᴘᴀᴍᴏᴅ ᴍᴀᴅᴜʙᴀsʜᴀɴᴀ.."
+    msg = f"{msg}\n\nᴇʀʀᴏʀ ʜᴀɴᴅʟᴇʀ ᴠ𝟸\nᴏᴘʏʀɪɢʜᴛ © 𝟸𝟶𝟸𝟹-𝟸𝟶𝟸𝟺 ᴘᴀᴍᴏᴅ ᴍᴀᴅᴜʙᴀsʜᴀɴᴀ.."
     await context.bot.send_message(chat_id=-1001992131235, text=msg,parse_mode='Markdown')
 
 
