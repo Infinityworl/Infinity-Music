@@ -13,7 +13,7 @@ if __name__ == '__main__':
     app.add_handler(CommandHandler('start', start_command))
     # app.add_handler(CommandHandler('help', help_command))
     app.add_handler(CommandHandler('song', song))
-    application.add_handler(CommandHandler("bad_command", bad_command))
+    application.add_handler(CommandHandler("error", bad_command))
     app.add_error_handler(error_handler)
     print('Polling...')
     app.run_polling(poll_interval=3)
