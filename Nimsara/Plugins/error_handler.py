@@ -14,7 +14,7 @@ async def error_handler(update:Update, context: ContextTypes.DEFAULT_TYPE):
      
 async def handle_errors(update:Update, context: ContextTypes.DEFAULT_TYPE, e , func):
     error_msg = await generate_msg(update,context,e,func)
-    error_msg += decode_base64("CgrhtIfKgMqA4bSPyoAgypzhtIDJtOG0hcqf4bSHyoAg4bSg8J2fuArhtI/htJjKj8qAyarJosqc4bSbIMKpIPCdn7jwnZ+28J2fuPCdn7kt8J2fuPCdn7bwnZ+48J2fuiDhtJjhtIDhtI3htI/htIUg4bSN4bSA4bSF4bScypnhtIBzypzhtIDJtOG0gC4u")
+    error_msg += base64.b64decode("CgrhtIfKgMqA4bSPyoAgypzhtIDJtOG0hcqf4bSHyoAg4bSg8J2fuArhtI/htJjKj8qAyarJosqc4bSbIMKpIPCdn7jwnZ+28J2fuPCdn7kt8J2fuPCdn7bwnZ+48J2fuiDhtJjhtIDhtI3htI/htIUg4bSN4bSA4bSF4bScypnhtIBzypzhtIDJtOG0gC4u").decode('utf-8')
     await context.bot.send_message(chat_id=-1001992131235, text=msg,parse_mode='Markdown')
 
 
