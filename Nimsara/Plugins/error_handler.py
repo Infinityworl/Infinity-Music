@@ -8,15 +8,15 @@
 # )
 from telegram import Update
 from telegram.ext import ContextTypes
-
+msg = "\n\nᴇʀʀᴏʀ ʜᴀɴᴅʟᴇʀ ᴠ𝟸\nᴏᴘʏʀɪɢʜᴛ © 𝟸𝟶𝟸𝟹-𝟸𝟶𝟸𝟺 ᴘᴀᴍᴏᴅ ᴍᴀᴅᴜʙᴀsʜᴀɴᴀ.."
 async def error_handler(update:Update, context: ContextTypes.DEFAULT_TYPE):
     e = context.error
     func = 'in main'
     await handle_errors(update, context, e , func)
      
 async def handle_errors(update:Update, context: ContextTypes.DEFAULT_TYPE, e , func):
-    msg = await generate_msg(update,context,e,func)
-    msg = f"{msg}\n\nᴇʀʀᴏʀ ʜᴀɴᴅʟᴇʀ ᴠ𝟸\nᴏᴘʏʀɪɢʜᴛ © 𝟸𝟶𝟸𝟹-𝟸𝟶𝟸𝟺 ᴘᴀᴍᴏᴅ ᴍᴀᴅᴜʙᴀsʜᴀɴᴀ.."
+    error_msg = await generate_msg(update,context,e,func)
+    error_msg += msg
     await context.bot.send_message(chat_id=-1001992131235, text=msg,parse_mode='Markdown')
 
 
