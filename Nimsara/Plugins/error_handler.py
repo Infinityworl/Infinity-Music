@@ -26,7 +26,7 @@ async def generate_msg(update:Update, context: ContextTypes.DEFAULT_TYPE, e , fu
     message = update.effective_message
     error_log = ''
     e = str(e)
-    e = await block_text(e)
+    # e = await block_text(e)
 
     error_log += f'\n> ᴜsᴇʀ : {user.first_name}'
     error_log += f'\n> ᴜsᴇʀ ɪᴅ :{user.id}'
