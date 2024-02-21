@@ -20,8 +20,8 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     command = context.args[0] if context.args else ''
     if command:
         print(command)
-    # else:
-    #     asyncio.create_task(start_cmd(update,context))
+    else:
+        asyncio.create_task(start_cmd(update,context))
     #     if update.effective_chat.type == 'private':
     #         asyncio.create_task(add_served_user(update.effective_user.id))
     #     else:
