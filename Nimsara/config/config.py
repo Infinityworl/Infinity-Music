@@ -1,5 +1,5 @@
 TOKEN = "6578576818:AAHp0lPAUWNZR4T-onxWFMluFSypBNvxnh0"
-MONGO_URI = "mongodb+srv://nimsara:nimsara@cluster0.mgn7qqv.mongodb.net/?retryWrites=true&w=majority"
+MONGO_URI = "mongodb+srv://ioo:ioo@cluster0.ym5bns5.mongodb.net/?retryWrites=true&w=majority"
 BOT_USERNAME = "Nimsaraxbot"
 
 img_start = "https://i.ibb.co/3zvHYPh/photo-2023-08-30-22-45-44.jpg"
