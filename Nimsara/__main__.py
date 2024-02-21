@@ -9,7 +9,7 @@ import re
 import os
 
 
-TOKEN = '6578576818:AAEBfTyvp6u_oCXQ0d_kbslNg0SEFkgQvtA'
+TOKEN = '6578576818:AAHp0lPAUWNZR4T-onxWFMluFSypBNvxnh0'
 BOT_USERNAME = 'Nimsaraxbot'
 print('Starting up bot...')
 
