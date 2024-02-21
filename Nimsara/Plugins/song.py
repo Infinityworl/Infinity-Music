@@ -63,7 +63,7 @@ async def get_results(update: Update, context: ContextTypes.DEFAULT_TYPE):
             except:
                 pass
 
-async def handle_song2(update: Update,vid_id,m, context: ContextTypes.DEFAULT_TYPE):
+async def handle_song(update: Update,vid_id,m, context: ContextTypes.DEFAULT_TYPE):
     url = f"https://www.youtube.com/watch?v={vid_id}"
     toDownload = YoutubeSearch(url, max_results=1).to_dict()
 
