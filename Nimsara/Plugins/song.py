@@ -6,7 +6,6 @@ from Plugins.help_functions.mention import mention
 from pytube import YouTube
 from youtubesearchpython import VideosSearch
 from config import *
-from .delete_timer import delete_message
 
 import yt_dlp
 import requests
