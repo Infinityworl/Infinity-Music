@@ -1,6 +1,6 @@
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
-from Plugins import start_command ,error_handler , song
+from Plugins import start_command ,error_handler ,handle_song
 from config import TOKEN
 
 print('Starting up bot...')
