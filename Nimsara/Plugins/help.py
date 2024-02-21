@@ -1,10 +1,8 @@
 from telegram import Update
-from telegram.ext import ContextTypes	from telegram.ext import ContextTypes
+from telegram.ext import ContextTypes
+from Plugins.help_functions.force_sub import force_sub_chanel
 
-
-def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):	async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    update.message.reply_text('Try typing anything, and I will do my best to respond.')	    await update.message.reply_text('Try typing anything, and I will do my best to respond.')
-0 comments on commit 4576c21
-@Infinityworl
-Comment
- 
+async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    in_channel = await force_sub_chanel(update,context)
+    if in_channel:
+        await update.message.reply_text('Try typing anything, and I will do my best to respond.')
