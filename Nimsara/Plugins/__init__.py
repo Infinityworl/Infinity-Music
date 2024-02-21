@@ -1,3 +1,4 @@
-from .song import handle_song
+from .song *
 from .start import start_command
 from .help import help_command
+
