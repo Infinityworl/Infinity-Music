@@ -2,7 +2,7 @@ from telegram import  Update ,InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ContextTypes
 
 import asyncio
-from Database import add_served_user , add_served_chat
+# from Database import add_served_user , add_served_chat
 from config import img_start as LOGO
 
 async def mention(user_id,context: ContextTypes.DEFAULT_TYPE):
@@ -20,12 +20,12 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     command = context.args[0] if context.args else ''
     if command:
         print(command)
-    else:
-        asyncio.create_task(start_cmd(update,context))
-        if update.effective_chat.type == 'private':
-            asyncio.create_task(add_served_user(update.effective_user.id))
-        else:
-            asyncio.create_task(add_served_chat(update.effective_chat.id))
+    # else:
+    #     asyncio.create_task(start_cmd(update,context))
+    #     if update.effective_chat.type == 'private':
+    #         asyncio.create_task(add_served_user(update.effective_user.id))
+    #     else:
+    #         asyncio.create_task(add_served_chat(update.effective_chat.id))
 
 async def start_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
     bot = await context.bot.get_me()
