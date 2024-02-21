@@ -6,6 +6,7 @@ from Plugins.help_functions.mention import mention
 from pytube import YouTube
 from youtubesearchpython import VideosSearch
 from config import *
+from .delete_timer import delete_message
 
 import yt_dlp
 import requests
@@ -63,7 +64,7 @@ async def get_results(update: Update, context: ContextTypes.DEFAULT_TYPE):
             except:
                 pass
 
-async def handle_song2(update: Update,vid_id,m, context: ContextTypes.DEFAULT_TYPE):
+async def handle_song(update: Update,vid_id,m, context: ContextTypes.DEFAULT_TYPE):
     url = f"https://www.youtube.com/watch?v={vid_id}"
     toDownload = YoutubeSearch(url, max_results=1).to_dict()
 
