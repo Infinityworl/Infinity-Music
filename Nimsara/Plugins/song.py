@@ -1,7 +1,6 @@
 from telegram import Update, InlineKeyboardButton , InlineKeyboardMarkup
 from telegram.ext import ContextTypes
 from youtube_search import YoutubeSearch
-from Plugins.help_functions.force_sub import force_sub_chanel
 from pytube import YouTube
 import requests
 import asyncio
@@ -11,34 +10,32 @@ from config import *
 
 async def handle_song(update: Update, context: ContextTypes.DEFAULT_TYPE):
     message = update.message
-    in_channel = await force_sub_chanel(update,context)
-    if in_channel:
-        try: 
-            if update.message.text == "/song":
-                await message.reply_text("Give a song name brother  ⚠️")
-                return 
-            else:
-                m = await message.reply_text("🔎 Searching ...")
-                st =await message.reply_sticker(sticker=st_loading)
-                name = message.text.split(None, 1)[1]
-                results = YoutubeSearch(name, max_results=1).to_dict()
-                title = results[0]["title"]
-                title = title.replace("[", "\[")
-                # title = title.replace("]", "\]")
-                
-                vid_id = results[0]["id"]
-                duration = results[0]["duration"]
-                performer = results[0]["channel"]
-                views = results[0]["views"]
-                views = views.replace(" views", "")
-                # views = re.search(r'\d+', views).group()
-                # await downloadsong(m,st, message, vid_id, title, duration, performer, views)
-                print(vid_id, title, duration, performer, views)
-    
-        except Exception as e:
-            await context.bot.edit_message_text(chat_id=message.chat_id, message_id=m.message_id, text=f"**Nothing Found** [{message.from_user.first_name}](tg://user?id={message.from_user.id})" , parse_mode='Markdown')
-            await context.bot.delete_message(chat_id=message.chat_id, message_id=st.message_id)
-        await download_song(m, st, message, vid_id, title, duration, performer, views,context)
+    try: 
+        if update.message.text == "/song":
+            await message.reply_text("Give a song name brother  ⚠️")
+            return 
+        else:
+            m = await message.reply_text("🔎 Searching ...")
+            st =await message.reply_sticker(sticker=st_loading)
+            name = message.text.split(None, 1)[1]
+            results = YoutubeSearch(name, max_results=1).to_dict()
+            title = results[0]["title"]
+            title = title.replace("[", "\[")
+            # title = title.replace("]", "\]")
+            
+            vid_id = results[0]["id"]
+            duration = results[0]["duration"]
+            performer = results[0]["channel"]
+            views = results[0]["views"]
+            views = views.replace(" views", "")
+            # views = re.search(r'\d+', views).group()
+            # await downloadsong(m,st, message, vid_id, title, duration, performer, views)
+            print(vid_id, title, duration, performer, views)
+
+    except Exception as e:
+        await context.bot.edit_message_text(chat_id=message.chat_id, message_id=m.message_id, text=f"**Nothing Found** [{message.from_user.first_name}](tg://user?id={message.from_user.id})" , parse_mode='Markdown')
+        await context.bot.delete_message(chat_id=message.chat_id, message_id=st.message_id)
+    await download_song(m, st, message, vid_id, title, duration, performer, views,context)
     
 temp = []
 async def download_song(m, st, message, vid_id, title, duration, performer, views,context: ContextTypes.DEFAULT_TYPE):
@@ -94,7 +91,7 @@ async def download_song(m, st, message, vid_id, title, duration, performer, view
         first, last = os.path.splitext(down)
         song = first + '.mp3'
         os.rename(down, song)
-        # await context.bot.edit_message_text(chat_id=message.chat_id, message_id=m.message_id, text=text.format("Download Completed",title, vid_id, dussration, performer, views), parse_mode='Markdown',reply_markup=None)
+        await context.bot.edit_message_text(chat_id=message.chat_id, message_id=m.message_id, text=text.format("Download Completed",title, vid_id, duration, performer, views), parse_mode='Markdown')
         st3 = await context.bot.send_sticker(chat_id=message.chat_id, sticker=st_uploading)
         temp.append(st3.message_id)
         await context.bot.delete_message(chat_id=message.chat_id, message_id=st2.message_id)
