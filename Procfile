@@ -1,1 +1,1 @@
-worker: python Nimsara/__main__.py
+web: python Nimsara/__main__.py
