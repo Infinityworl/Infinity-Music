@@ -1,6 +1,6 @@
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
-from Plugins import start_command , song
+from Plugins import start_command ,error_handler, song
 from config import TOKEN
 print('Starting up bot...')
 async def bad_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -12,5 +12,6 @@ if __name__ == '__main__':
     # app.add_handler(CommandHandler('help', help_command))
     app.add_handler(CommandHandler('song', song))
     app.add_handler(CommandHandler("error", bad_command))
+    app.add_error_handler(error_handler)
     print('Polling...')
     app.run_polling(poll_interval=3)
